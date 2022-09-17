@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://www.wfonts.com/font/corbel');
+
+:root {
+    --primary-color: rgb(59, 138, 181);
+    --secondary-color: rgb(43, 19, 123);
+}
+
+body {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: corbel, Lato, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 60px black;
+    padding: 7px 0;
+    margin-bottom: 50px;
+}
+
+#portrait {
+    max-width: 150px;
+    margin: 10px 50px;
+    box-shadow: 0 0 6px black;
+}
+
+h1{
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.bar {
+    height: 1px;
+    background-color: black;
+    margin: 10px 0;
+}
+
+#assignment-list {
+    letter-spacing: 0.1em;
+}
+
+li {
+    margin: 5px 0;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 60px black;
+    padding: 7px 0;
+    margin-top: 70px;
+}
+#updated {
+    color: var(--secondary-color);
+}
