@@ -1,0 +1,13 @@
+@media (min-width: 32.5em) {
+    header {
+        margin: 5px 5px 50px 5px;
+    }
+    
+    #portrait {
+        width: 150px;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+}
