@@ -1,0 +1,27 @@
+@media only screen and (min-width: 650px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .principle-box {
+        margin: 0.5rem;
+    }
+
+    #apple {
+        grid-column: 1/2;
+    }
+
+    #microsoft {
+        grid-column: 2/3;
+    }
+
+    #nvidia {
+        grid-column: 1/3;
+    }
+}
