@@ -1,23 +1,30 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
 
 /*----------- apply a natural box layout model to all elements --------------*/
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 
 /*----------- BODY --------------*/
 body {
     font-size: 16px;
-    font-family: Verdana, sans-serif;
-    background-color: rgb(253, 245, 232);
-    color: rgb(4, 4, 71);
+    font-family: Lato, Helvetica, sans-serif;
+    background-color: #fdf5e8;
+    color: #040447;
 }
 
 
 /*----------- HEADER --------------*/
 header {
     padding: .5rem 2%;
-    background-color: rgb(6, 17, 104);
+    background-color: #061168;
     color: #fff;
     display: grid;
     grid-template-columns: 75px auto;
@@ -27,13 +34,20 @@ header div {
     margin-left: 15px;
 }
 
-header h1 {margin: 0;}
-header h2 {margin: 0; font-weight: normal;}
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: normal;
+}
 
 /*----------- NAVIGATION --------------*/
 nav {
-    background-color: rgb(7, 55, 197);
+    background-color: #0737c5;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -54,18 +68,66 @@ nav ul li a:hover {
     background-color: #aaa;
     color: #333;
 }
+
 nav ul li.active a {
-    background-color: rgb(6, 17, 104);
+    background-color: #061168;
     color: #fff;
 }
+
 /*----------- MAIN --------------*/
 main {
     padding: 0 2%;
     min-height: 10rem;
 }
 
-#white-on-colour{
-    background-color: rgb(36, 36, 166);
+p {
+    color: #1d1d1d;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.colors td {
+    width: 25%;
+    height: 1.5em;
+}
+
+.site-header {
+    background-color: #061168;
+    color: #fff;
+}
+
+.prim-nav {
+    background-color: #0737c5;
+    color: #fff;
+}
+
+.nav-active {
+    background-color: #061168;
+    color: #fff;
+}
+
+.footer-col {
+    background-color: #061168;
+    color: #fff;
+}
+
+.heading {
+    background-color: #fff;
+    color: #061168;
+}
+
+.paragraph {
+    background-color: #fff;
+    color: #1d1d1d;
+}
+
+#white-on-colour {
+    background-color: #040447;
     color: #fff;
     padding: .5rem;
 }
@@ -73,7 +135,7 @@ main {
 
 /*----------- FOOTER --------------*/
 footer {
-    background-color: rgb(4, 4, 71);
+    background-color: #040447;
     color: #fff;
     padding: .5rem 2%;
     text-align: center;
