@@ -84,6 +84,21 @@ p {
     color: #1d1d1d;
 }
 
+.personas {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+.personas td {
+    border: 1px solid #000;
+}
+
+.table-desc {
+    width: 15%;
+}
+
 .colors {
     width: 100%;
     min-width: 350px;
