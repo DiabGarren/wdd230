@@ -11,13 +11,9 @@
 
 
 /*----------- NAVIGATION --------------*/
-    nav ul {
-        display: flex;
-        margin-left: 2%;
-    }
-
-
-    nav ul li a{padding: .5rem 1rem;}
+#primary_nav {
+    display: none;
+}
 
 
 /*----------- MAIN --------------*/

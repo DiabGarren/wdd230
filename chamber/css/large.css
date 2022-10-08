@@ -1,9 +1,10 @@
 /* 64em is also 1028px (if basefont is 16px) */
 @media only screen and (min-width: 64rem) {
 
-    header, nav, main, footer {
+    header, main, footer {
+        display: block;
         max-width: 64rem;
-        margin:auto;
+        margin: auto;
     }
 
 /*----------- BODY --------------*/
@@ -11,7 +12,30 @@
 
 
 /*----------- HEADER --------------*/
+#ham_btn {
+    display: none;
+}
 
+#primary_nav {
+    display: flex;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    padding-left: 2%;
+}
+
+nav ul li {
+    flex-basis: auto;
+    padding-right: 2rem;
+}
+
+nav a {
+    padding: .5rem 1rem;
+}
 
 
 /*----------- NAVIGATION --------------*/
