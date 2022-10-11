@@ -14,13 +14,7 @@ if (document.getElementById("year").innerHTML != null) {
 }
 
 function toggleMenu() {
-    nav = document.getElementById("primary_nav");
-    if (nav.style.display == "none" || nav.style.display == "") {
-        nav.style.display = "block";
-    } else {
-        nav.style.display = "none";
-    }
-
+    document.getElementById("primary_nav").classList.toggle("open");
     if (hamBtn.innerHTML == "☰" || hamBtn.innerHTML == "&#9776;") {
         hamBtn.innerHTML = "X";
     } else {

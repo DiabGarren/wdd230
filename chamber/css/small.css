@@ -53,13 +53,6 @@ header h2 {
 nav {
     background-color: #0737c5;
     font-size: 'Pragati Narrow';
-    grid-column: 1/3;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 #ham_btn {
@@ -70,17 +63,25 @@ nav ul {
     padding: 0.5rem;
 }
 
-#primary_nav {
+.open {
+    display: block;
+}
+
+nav ul {
     display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
     display: block;
     color: #eee;
-    padding: .5rem 0;
+    padding: .8rem 0;
     text-decoration: none;
     font-size: .9rem;
     text-align: center;
+    font-size: 1rem;
 }
 
 
@@ -104,72 +105,11 @@ p {
     color: #1d1d1d;
 }
 
-.personas {
-    width: 100%;
-    min-width: 350px;
-    margin: 30px auto;
-    border-collapse: collapse;
-}
-
-.personas td {
-    border: 1px solid #000;
-}
-
-.table-desc {
-    width: 15%;
-}
-
-.colors {
-    width: 100%;
-    min-width: 350px;
-    margin: 30px auto;
-    text-align: center;
-}
-
-.colors td {
-    width: 25%;
-    height: 1.5em;
-}
-
-.site-header {
-    background-color: #061168;
-    color: #fff;
-}
-
-.prim-nav {
-    background-color: #0737c5;
-    color: #fff;
-}
-
-.nav-active {
-    background-color: #061168;
-    color: #fff;
-}
-
-.footer-col {
-    background-color: #061168;
-    color: #fff;
-}
-
-.heading {
-    color: #061168;
-}
-
-.paragraph {
-    color: #1d1d1d;
-}
-
-#white-on-colour {
-    background-color: #040447;
-    color: #fff;
-    padding: .5rem;
-}
-
-
 /*----------- FOOTER --------------*/
 footer {
     background-color: #040447;
     color: #fff;
+    font-size: 1rem;
     padding: .5rem 2%;
     text-align: center;
 }

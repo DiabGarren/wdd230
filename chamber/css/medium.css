@@ -11,8 +11,20 @@
 
 
 /*----------- NAVIGATION --------------*/
-#primary_nav {
+#ham_btn {
     display: none;
+}
+
+.open {
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li {
+    flex-basis: 25%;
 }
 
 
