@@ -31,7 +31,7 @@ button.addEventListener("click", () => {
         list.appendChild(nodeLi);
         
         // add an event listener to the new button
-        nodeButton.addEventListener("click", function() {
+        nodeButton.addEventListener("click", () => {
             // remove the entire li item
             list.removeChild(nodeLi);
         });
