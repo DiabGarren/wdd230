@@ -125,7 +125,11 @@ p {
     font-size: 18px;
 }
 
-.card #join {
+#join {
+    display: none;
+}
+
+.card #join-btn {
     background-color: #1aff00;
     color: #061168;
     padding: .5rem;
