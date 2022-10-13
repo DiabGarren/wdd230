@@ -105,6 +105,10 @@ main {
     min-height: 10rem;
 }
 
+main h1 {
+    padding: 0 2%;
+}
+
 p {
     color: #eee;
     line-height: 1.7em;
