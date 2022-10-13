@@ -136,6 +136,11 @@ p {
     border-radius: 10px;
 }
 
+.card #join-btn:hover {
+    background-color: #0b6f00;
+    color: #eee;
+}
+
 .spotlight {
     background-color: #061168;
     padding: 1.5rem;
