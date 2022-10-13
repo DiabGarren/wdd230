@@ -46,7 +46,7 @@ header h1 {
 header h2 {
     margin: 0;
     font-weight: normal;
-    font-size: 'Pragati Narrow';
+    font-family: 'Pragati Narrow';
 }
 
 header #date {
@@ -64,7 +64,7 @@ header #date {
 /*----------- NAVIGATION --------------*/
 nav {
     background-color: #0737c5;
-    font-size: 'Pragati Narrow';
+    font-family: 'Pragati Narrow';
 }
 
 
