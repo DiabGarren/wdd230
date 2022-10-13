@@ -50,15 +50,8 @@ header h2 {
 }
 
 header #date {
-    grid-column: 1/3;
     padding: .1rem 2%;
     text-align: center;
-}
-
-/*----------- NAVIGATION --------------*/
-nav {
-    background-color: #0737c5;
-    font-size: 'Pragati Narrow';
 }
 
 #ham_btn {
@@ -68,6 +61,12 @@ nav {
     font-size: 2rem;
     padding: 0.5rem;
 }
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: #0737c5;
+    font-size: 'Pragati Narrow';
+}
+
 
 .open {
     display: block;
