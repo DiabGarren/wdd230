@@ -24,3 +24,8 @@ function toggleMenu() {
 
 const hamBtn = document.querySelector("#ham_btn");
 hamBtn.addEventListener("click", toggleMenu);
+
+const meeting = document.querySelector("#event");
+if (now.getDay() == 1 || now.getDay() == 2) {
+    meeting.innerHTML = "<h2>Wednesday Meeting!</h2><p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>"
+}
