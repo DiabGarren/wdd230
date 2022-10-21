@@ -15,7 +15,7 @@
     <link href="css/medium.css" rel="stylesheet">
     <link href="css/large.css" rel="stylesheet">
 
-    <link href="images/logo.png" rel="shortcut icon">
+    <link href="images/logo.webp" rel="shortcut icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,7 +25,7 @@
 
 <body>
     <header>
-        <img src="images/logo.png" alt="logo">
+        <img src="images/logo.webp" alt="logo">
         <div>
             <h1>Chamber of Commerce</h1>
             <h2>Welcome to Roodepoort</h2>
@@ -48,11 +48,16 @@
 
     <!-- CONTENT HERE -->
     <main>
+        <picture class="hero-img">
+            <source media="(max-width:400px)" srcset="images/heroSrc400.jpg">
+            <source media="(max-width:650px)" srcset="images/heroSrc650.jpg">
+            <source media="(max-width:900px)" srcset="images/heroSrc900.jpg">
+            <img src="images/heroSrc1050.jpg" alt="Hero Scr">
+        </picture>
         <h1>Home</h1>
         <section>
             <article class="card" id="hero">
                 <h2>Welcome to Roodepoort</h2>
-                <img src="images/hero.jpg" alt="Hero img or Roodepoort">
                 <a href="#" id="join-btn">Join Today!</a>
             </article>
             <article class="card" id="join">
@@ -67,7 +72,11 @@
             </article>
             <article class="card" id="weather">
                 <h2>Weather</h2>
-                <p>31°C<br>Wind: 13km/h<br>Precipitation: 0%</p>
+                <p>
+                    <span id="temp">9</span>°C<br>
+                    Wind Speed: <span id="wind-speed">15</span>km/h<br>
+                    Wind Chill: <span id="wind-chill"></span>
+                </p>
             </article>
             <article class="card" id="news">
                 <h2>News Release</h2>
@@ -118,7 +127,8 @@
         </section>
         <div class="bar"></div>
         <section id="about">
-            &copy; <span id="year"></span> Roodeport Chamber | Garren Diab | WDD 230 Project | <span id="updated"></span>
+            &copy; <span id="year"></span> Roodeport Chamber | Garren Diab | WDD 230 Project | <span
+                id="updated"></span>
         </section>
     </footer>
 
