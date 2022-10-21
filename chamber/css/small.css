@@ -109,6 +109,16 @@ main h1 {
     padding: 0 2%;
 }
 
+main picture img {
+    width: 100%;
+}
+
+#hero {
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 p {
     color: #eee;
     line-height: 1.7em;
