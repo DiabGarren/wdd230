@@ -1,0 +1,13 @@
+
+main {
+    text-align: center;
+}
+
+picture {
+    display: block;
+    margin: 1rem auto;
+}
+
+picture img[data-scr] {
+    filter: blur(.2em);
+}
