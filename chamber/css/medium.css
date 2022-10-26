@@ -34,7 +34,7 @@
 
     /*----------- MAIN --------------*/
 
-    main section {
+    main div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0 1%;
