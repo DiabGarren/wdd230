@@ -86,7 +86,16 @@
         grid-row: 5;
     }
 
-
+    .disc-card {
+        grid-column: 1/4;
+        display: block;
+    }
+    
+    
+    
+    .disc-img img:hover {
+        box-shadow: 0 15px 10px #12d6f0, 0 -15px 10px #12d6f0;
+    }
 
     /*----------- FOOTER --------------*/
 
