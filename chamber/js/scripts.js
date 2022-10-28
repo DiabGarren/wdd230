@@ -90,7 +90,7 @@ if (lastVisit == null) {
     visit.textContent = "This is your first visit!";
     console.log()
 } else {
-    visit.textContent = Math.round((Date.now() - lastVisit) / 86400000);
+    visit.textContent = `${Math.round((Date.now() - lastVisit) / 86400000)} days`;
 }
 
 let visitTime = Date.now();
