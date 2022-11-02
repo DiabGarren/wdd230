@@ -1,0 +1,33 @@
+table, th, td{
+    border: 1px solid #050b48;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+    padding: .4em .8em;
+    font-size: 19px;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 0.5em 0;
+    color: #767676;
+}
+
+#title {
+    background-color: #0647bf;
+    color: #fff;
+}
+
+.heading {
+    background-color: #1566fc;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #91b7fd
+}
+
+td:hover {
+    background-color: #050b48;
+    color: #fff;
+}
