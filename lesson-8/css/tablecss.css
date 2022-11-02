@@ -5,6 +5,7 @@ table, th, td{
     margin: 0 auto;
     padding: .4em .8em;
     font-size: 19px;
+    width: 35%;
 }
 
 caption {
