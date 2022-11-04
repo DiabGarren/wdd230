@@ -7,7 +7,7 @@ const fulldate = new Intl.DateTimeFormat("en-US", {
     now
 );
 
-if (document.getElementById("year").innerHTML != null) {
+if (document.getElementById("year").innerHTML == null) {} else {
     document.getElementById("year").innerHTML = year;
     document.getElementById("updated").innerHTML = `Last updated ${document.lastModified}`;
     document.getElementById("date").innerHTML = fulldate;
@@ -26,12 +26,14 @@ const hamBtn = document.querySelector("#ham_btn");
 hamBtn.addEventListener("click", toggleMenu);
 
 const meeting = document.querySelector("#event");
-if (now.getDay() == 1 || now.getDay() == 2) {
-    meeting.innerHTML = "<h2>Wednesday Meeting!</h2><p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>"
+if (meeting == null) {} else {
+    if (now.getDay() == 1 || now.getDay() == 2) {
+        meeting.innerHTML = "<h2>Wednesday Meeting!</h2><p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>"
+    }
 }
 
-if (document.querySelector("#temp") == null) {} else {
-    const temp = document.querySelector("#temp").textContent;
+const temp = document.querySelector("#temp");
+if (temp == null) {} else {
     const windSpeed = document.querySelector("#wind-speed").textContent;
     const windChill = document.querySelector("#wind-chill");
 
@@ -47,12 +49,11 @@ if (document.querySelector("#temp") == null) {} else {
             return `${windChill.toFixed(2)}°C`;
         }
     }
-
-    windChill.textContent = calcWindChill(temp, windSpeed);
+    windChill.textContent = calcWindChill(temp.textContent, windSpeed);
 }
 
-if (document.querySelector("img[data-src]") == null) {} else {
-    let imagesToLoad = document.querySelectorAll("img[data-src]");
+let imagesToLoad = document.querySelectorAll("img[data-src]");
+if (imagesToLoad == null) {} else {
     const loadImages = (image) => {
         image.setAttribute("src", image.getAttribute("data-src"));
         image.onload = () => {
@@ -81,18 +82,22 @@ if (document.querySelector("img[data-src]") == null) {} else {
     }
 }
 
-
 const visit = document.querySelector("#visit");
+if (visit == null) {} else {
+    let lastVisit = window.localStorage.getItem("lastVisitTime");
 
-let lastVisit = window.localStorage.getItem("lastVisitTime");
+    if (lastVisit == null) {
+        visit.textContent = "This is your first visit!";
+    } else {
+        visit.textContent = `${Math.round((Date.now() - lastVisit) / 86400000)} days`;
+    }
 
-if (lastVisit == null) {
-    visit.textContent = "This is your first visit!";
-    console.log()
-} else {
-    visit.textContent = `${Math.round((Date.now() - lastVisit) / 86400000)} days`;
+    let visitTime = Date.now();
+
+    localStorage.setItem("lastVisitTime", visitTime);
 }
 
-let visitTime = Date.now();
-
-localStorage.setItem("lastVisitTime", visitTime);
+const formDate = document.querySelector("#form-date");
+if (formDate == null) {} else {
+    formDate.value = Date.now();
+}
