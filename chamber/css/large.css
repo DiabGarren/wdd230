@@ -119,6 +119,39 @@
             -10px 10px 20px #12d6f0;
     }
 
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #member-level {
+        display: block;
+        margin: 0 1.5rem;
+    }
+    #membership-levels h2 {
+        text-decoration: underline;
+    }
+
+    #np {
+        color: #17ec34;
+    }
+
+    #bronze {
+        color: #CD7F32;
+    }
+
+    #silver {
+        color: #C0C0C0;
+    }
+
+    #gold {
+        color: #FFD700;
+    }
+    
+    .member-color {
+        text-shadow: 0px 0px 2px #fff;
+    }
+
     /*----------- FOOTER --------------*/
 
     footer {
