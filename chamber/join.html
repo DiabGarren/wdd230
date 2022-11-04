@@ -49,61 +49,63 @@
     <!-- CONTENT HERE -->
     <main>
         <form action="thankyou.html">
-            <label for="first-name">
-                First Name
-                <abbr title="The field is required">*</abbr>
-                <input type="text" name="first-name" id="first-name" required>
-            </label>
+            <div id="form-content">
+                <label for="first-name">
+                    First Name
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="first-name" id="first-name" required>
+                </label>
 
-            <label for="last-name">
-                Last Name
-                <abbr title="The field is required">*</abbr>
-                <input type="text" name="last-name" id="last-name" required>
-            </label>
+                <label for="last-name">
+                    Last Name
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="last-name" id="last-name" required>
+                </label>
 
-            <label for="title">
-                Title
-                <input type="text" name="title" id="title" pattern="[A-Za-z]+{7,50}">
-            </label>
+                <label for="title">
+                    Title
+                    <input type="text" name="title" id="title" pattern="[A-Za-z]+{7,50}">
+                </label>
 
-            <label for="email">
-                Email
-                <abbr title="The field is required">*</abbr>
-                <input type="email" name="email" id="email" required>
-            </label>
+                <label for="email">
+                    Email
+                    <abbr title="The field is required">*</abbr>
+                    <input type="email" name="email" id="email" required>
+                </label>
 
-            <label for="phone">
-                Cell Number
-                <abbr title="The field is required">*</abbr>
-                <input type="text" name="phone" id="phone" pattern="[0-9]{10}" required>
-            </label>
+                <label for="phone">
+                    Cell Number
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="phone" id="phone" pattern="[0-9]{10}" required>
+                </label>
 
-            <label for="bus-title">
-                Business Title
-                <abbr title="The field is required">*</abbr>
-                <input type="text" name="bus-title" id="bus-title" required>
-            </label>
+                <label for="bus-title">
+                    Business Title
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="bus-title" id="bus-title" required>
+                </label>
 
-            <label for="membership">
-                Membership Level
-                <select name="membership" id="membership">
-                    <option value="NP">NP</option>
-                    <option value="Bronze">Bronze</option>
-                    <option value="Silver">Silver</option>
-                    <option value="Gold">Gold</option>
-                </select>
-            </label>
+                <label for="membership">
+                    Membership Level
+                    <select name="membership" id="membership">
+                        <option value="NP">NP</option>
+                        <option value="Bronze">Bronze</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Gold">Gold</option>
+                    </select>
+                </label>
 
-            <label for="bus-desc">
-                Business Description
-                <textarea name="bus-desc" id="bus-desc"></textarea>
-            </label>
+                <label for="bus-desc">
+                    Business Description
+                    <textarea name="bus-desc" id="bus-desc"></textarea>
+                </label>
 
-            <label for="form-date" hidden>
-                <input type="text" name="form-date" id="form-date">
-            </label>
+                <label for="form-date" hidden>
+                    <input type="text" name="form-date" id="form-date">
+                </label>
 
-            <input type="submit" value="Submit" id="submit">
+                <input type="submit" value="Submit" id="submit">
+            </div>
         </form>
     </main>
 
