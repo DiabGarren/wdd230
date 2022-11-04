@@ -97,6 +97,20 @@
         box-shadow: 0 15px 10px #12d6f0, 0 -15px 10px #12d6f0;
     }
 
+    form {
+        margin: .8rem 1%;
+    }
+    
+    #form-content {
+        display: block;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #thank-you {
+        margin: .8rem 1%;
+    }
+
     /*----------- FOOTER --------------*/
 
     footer {
