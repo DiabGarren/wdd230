@@ -205,7 +205,6 @@ form {
 form input,
 form select,
 form textarea {
-    display: block;
     margin: .2rem 2% 1.25rem;
 }
 
