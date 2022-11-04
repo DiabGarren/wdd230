@@ -189,6 +189,41 @@ p {
     padding-bottom: .75rem;
 }
 
+form {
+    background-color: #061168;
+    color: #fff;
+    padding: .8rem 0 1rem 2.5rem;
+    margin: .8rem 0;
+}
+
+form input,
+form select,
+form textarea {
+    display: block;
+    margin: .2rem 0 1.25rem;
+}
+
+#first-name,
+#last-name,
+#title,
+#email,
+#phone,
+#bus-title,
+#membership,
+#bus-desc,
+#submit {
+    width: 75%;
+}
+
+#thank-you {
+    background-color: #061168;
+    color: #fff;
+    text-align: center;
+    padding: .5rem 0 1rem;
+    margin: .8rem auto;
+    font-size: 18px;
+}
+
 /*----------- FOOTER --------------*/
 footer {
     background-color: #040447;
