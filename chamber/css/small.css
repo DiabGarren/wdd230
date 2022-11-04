@@ -192,15 +192,29 @@ p {
 form {
     background-color: #061168;
     color: #fff;
-    padding: .8rem 0 1rem 2.5rem;
+    padding: .8rem 1rem;
     margin: .8rem 0;
+}
+
+#form-content {
+    border: 3px solid #040447;
+    border-radius: 10px;
+    padding: 1rem .5rem;
 }
 
 form input,
 form select,
 form textarea {
     display: block;
-    margin: .2rem 0 1.25rem;
+    margin: .2rem 2% 1.25rem;
+}
+
+form label {
+    margin-left: 2%;
+}
+
+#submit {
+    margin-bottom: .2rem;
 }
 
 #first-name,
@@ -212,7 +226,7 @@ form textarea {
 #membership,
 #bus-desc,
 #submit {
-    width: 75%;
+    width: 96%;
 }
 
 #thank-you {
