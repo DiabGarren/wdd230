@@ -228,6 +228,15 @@ form label {
     width: 96%;
 }
 
+#submit:hover {
+    background-color: #061168;
+    color: #fff;
+}
+
+#membership-levels {
+    display: none;
+}
+
 #thank-you {
     background-color: #061168;
     color: #fff;
