@@ -101,3 +101,51 @@ const formDate = document.querySelector("#form-date");
 if (formDate == null) {} else {
     formDate.value = Date.now();
 }
+
+function displayBusinesses(business) {
+    if (business.name == null) {} else {
+        let card = document.createElement("section");
+        let name = document.createElement("h2");
+        let address = document.createElement("p");
+        let phone = document.createElement("p");
+        let link = document.createElement("a");
+        let img = document.createElement("img");
+
+        name.textContent = business.name;
+
+        address.textContent = business.address
+
+        phone.textContent = business.phone;
+
+        link.setAttribute("href", business.link);
+        link.setAttribute("target", "_blank");
+        link.textContent = business.link;
+
+        img.setAttribute("src", business.imageurl);
+        img.setAttribute("alt", business.name);
+        img.setAttribute("loading", "lazy");
+
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(link);
+
+        document.querySelector("div.business-cards").appendChild(card);
+    }
+};
+
+let bussinessCards = document.querySelector(".business-cards");
+if (bussinessCards == null) {} else {
+    let businessInfo = [];
+
+    const getBusinessInfo = async () => {
+        const response = await fetch("json/data.json");
+
+        businessInfo = await response.json();
+
+        displayBusinesses(businessInfo);
+        businessInfo.forEach(displayBusinesses);
+    }
+    getBusinessInfo();
+}
