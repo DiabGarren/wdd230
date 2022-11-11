@@ -246,6 +246,33 @@ form label {
     font-size: 18px;
 }
 
+.business-cards {
+    display: block;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.business-cards section {
+    margin: .2rem;
+    padding: 1.5rem;
+    background-color: #061168;
+    color: #fff;
+}
+
+.business-cards section p {
+    margin: .4rem;
+}
+
+.business-cards section a {
+    color: rgb(105, 246, 227);
+}
+
+.business-cards section img {
+    max-width: 96%;
+    max-height: 120px;
+}
+
 /*----------- FOOTER --------------*/
 footer {
     background-color: #040447;

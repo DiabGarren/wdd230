@@ -111,6 +111,24 @@
         margin: .8rem 1%;
     }
 
+    .business-cards {
+        display: block;
+        max-width: 100%;
+    }
+
+    .business-cards section {
+        display: grid;
+        grid-template-columns: 20% 23% 17% 40%;
+    }
+
+    .business-cards section h2 {
+        font-size: 1.1rem;
+    }
+
+    .business-cards section img {
+        display: none;
+    }
+
     /*----------- FOOTER --------------*/
 
     footer {
