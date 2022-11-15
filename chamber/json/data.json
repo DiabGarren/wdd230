@@ -5,7 +5,8 @@
         "phone": "083 266 7769",
         "link": "http://runawaysuccess.co.za/",
         "imageurl": "https://www.runawaysuccess.co.za/wp-content/uploads/2019/02/Logo-min-e1550822339366.png",
-        "membership": "Bronze"
+        "membership": "Bronze",
+        "background": "white"
     },
     {
         "name": "Guardian Business Services (Pty) Ltd",
@@ -13,7 +14,8 @@
         "phone": "087 094 3550",
         "link": "http://guardianbusiness.co.za/",
         "imageurl": "http://guardianbusiness.co.za/images/logo-black.png",
-        "membership": "Bronze"
+        "membership": "Bronze",
+        "background": "white"
     },
     {
         "name": "SA Business Plans",
@@ -21,7 +23,8 @@
         "phone": "072 679 6590",
         "link": "http://www.sabusinessplans.co.za/",
         "imageurl": "http://www.sabusinessplans.co.za/wp-content/uploads/2016/03/s5_logo.png",
-        "membership": "Silver"
+        "membership": "Silver",
+        "background": "white"
     },
     {
         "name": "Phoenix Business Solutions (Pty) Ltd",
@@ -29,7 +32,8 @@
         "phone": "071 397 5799",
         "link": "http://www.phoenixbusinesssolutions.co.za/",
         "imageurl": "https://phoenixbusinesssolutions.co.za/wp-content/uploads/2022/03/Untitled-500-%C3%97-250-px.png",
-        "membership": "Bronze"
+        "membership": "Bronze",
+        "background": "black"
     },
     {
         "name": "Thyme Technologies",
@@ -37,7 +41,8 @@
         "phone": "086 110 1616",
         "link": "https://thymetech.co.za/",
         "imageurl": "http://thymetech.co.za/wp-content/uploads/2018/10/White-LOGO.png",
-        "membership": "Bronze"
+        "membership": "Bronze",
+        "background": "black"
     },
     {
         "name": "E-ssist Business Solutions",
@@ -45,7 +50,8 @@
         "phone": "011 475 0149",
         "link": "https://www.e-ssist.co.za/",
         "imageurl": "https://www.e-ssist.co.za/wp-content/uploads/2021/07/e-ssist-south-africa-logo-2021.png",
-        "membership": "Silver"
+        "membership": "Silver",
+        "background": "white"
     },
     {
         "name": "Karabo Business Solutions",
@@ -53,7 +59,8 @@
         "phone": "071 877 0572",
         "link": "http://www.karabobusinesssolutions.co.za/",
         "imageurl": "http://www.karabobusinesssolutions.co.za/images/logo.png",
-        "membership": "Bronze"
+        "membership": "Bronze",
+        "background": "black"
     },
     {
         "name": "Business intelligence",
@@ -61,7 +68,8 @@
         "phone": "011 764 1954",
         "link": "http://interactitsolutions.co.za/",
         "imageurl": "http://interactitsolutions.co.za/img/logo.png",
-        "membership": "Bronze"
+        "membership": "Bronze",
+        "background": "white"
     },
     {
         "name": "Cebisa Business Solutions",
@@ -69,6 +77,7 @@
         "phone": "082 574 0350",
         "link": "https://business-solutions-africa.business.site/",
         "imageurl": "https://lh3.googleusercontent.com/p/AF1QipP1EqRTkH40haeRaeIiDQ-S7kFc2DeG_0t62Shm=w1080-h608-p-no-v0",
-        "membership": "Bronze"
+        "membership": "Bronze",
+        "background": "black"
     }
 ]
