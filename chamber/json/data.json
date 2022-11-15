@@ -6,7 +6,8 @@
         "link": "http://runawaysuccess.co.za/",
         "imageurl": "https://www.runawaysuccess.co.za/wp-content/uploads/2019/02/Logo-min-e1550822339366.png",
         "membership": "Bronze",
-        "background": "white"
+        "background": "white",
+        "row": "odd"
     },
     {
         "name": "Guardian Business Services (Pty) Ltd",
@@ -15,7 +16,8 @@
         "link": "http://guardianbusiness.co.za/",
         "imageurl": "http://guardianbusiness.co.za/images/logo-black.png",
         "membership": "Bronze",
-        "background": "white"
+        "background": "white",
+        "row": "even"
     },
     {
         "name": "SA Business Plans",
@@ -24,7 +26,8 @@
         "link": "http://www.sabusinessplans.co.za/",
         "imageurl": "http://www.sabusinessplans.co.za/wp-content/uploads/2016/03/s5_logo.png",
         "membership": "Silver",
-        "background": "white"
+        "background": "white",
+        "row": "odd"
     },
     {
         "name": "Phoenix Business Solutions (Pty) Ltd",
@@ -33,7 +36,8 @@
         "link": "http://www.phoenixbusinesssolutions.co.za/",
         "imageurl": "https://phoenixbusinesssolutions.co.za/wp-content/uploads/2022/03/Untitled-500-%C3%97-250-px.png",
         "membership": "Bronze",
-        "background": "black"
+        "background": "black",
+        "row": "even"
     },
     {
         "name": "Thyme Technologies",
@@ -42,7 +46,8 @@
         "link": "https://thymetech.co.za/",
         "imageurl": "http://thymetech.co.za/wp-content/uploads/2018/10/White-LOGO.png",
         "membership": "Bronze",
-        "background": "black"
+        "background": "black",
+        "row": "odd"
     },
     {
         "name": "E-ssist Business Solutions",
@@ -51,7 +56,8 @@
         "link": "https://www.e-ssist.co.za/",
         "imageurl": "https://www.e-ssist.co.za/wp-content/uploads/2021/07/e-ssist-south-africa-logo-2021.png",
         "membership": "Silver",
-        "background": "white"
+        "background": "white",
+        "row": "even"
     },
     {
         "name": "Karabo Business Solutions",
@@ -60,7 +66,8 @@
         "link": "http://www.karabobusinesssolutions.co.za/",
         "imageurl": "http://www.karabobusinesssolutions.co.za/images/logo.png",
         "membership": "Bronze",
-        "background": "black"
+        "background": "black",
+        "row": "odd"
     },
     {
         "name": "Business intelligence",
@@ -69,7 +76,8 @@
         "link": "http://interactitsolutions.co.za/",
         "imageurl": "http://interactitsolutions.co.za/img/logo.png",
         "membership": "Bronze",
-        "background": "white"
+        "background": "white",
+        "row": "even"
     },
     {
         "name": "Cebisa Business Solutions",
@@ -78,6 +86,7 @@
         "link": "https://business-solutions-africa.business.site/",
         "imageurl": "https://lh3.googleusercontent.com/p/AF1QipP1EqRTkH40haeRaeIiDQ-S7kFc2DeG_0t62Shm=w1080-h608-p-no-v0",
         "membership": "Bronze",
-        "background": "black"
+        "background": "black",
+        "row": "odd"
     }
 ]
