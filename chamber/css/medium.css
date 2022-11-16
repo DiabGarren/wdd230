@@ -90,9 +90,9 @@
         grid-column: 1/4;
         display: block;
     }
-    
-    
-    
+
+
+
     .disc-img img:hover {
         box-shadow: 0 15px 10px #12d6f0, 0 -15px 10px #12d6f0;
     }
@@ -100,7 +100,7 @@
     form {
         margin: .8rem 1%;
     }
-    
+
     #form-content {
         display: block;
         max-width: 500px;
@@ -112,21 +112,46 @@
     }
 
     .business-cards {
-        display: block;
-        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+        justify-items: center;
+        text-align: center;
+        padding: 0 1.5em;
+        max-width: 1600px;
     }
 
     .business-cards section {
-        display: grid;
-        grid-template-columns: 20% 23% 17% 40%;
-    }
-
-    .business-cards section h2 {
-        font-size: 1.1rem;
+        display: block;
+        width: 95%;
+        border-radius: 10px;
     }
 
     .business-cards section img {
-        display: none;
+        display: inline;
+        margin: .75rem;
+    }
+
+    .img-box {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 150px;
+    }
+
+    #list {
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+
+    #list section {
+        border-radius: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, 260px)) 115px minmax(100px, 300px);
+    }
+
+    #list section a {
+        word-wrap: break-word;
     }
 
     /*----------- FOOTER --------------*/

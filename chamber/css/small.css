@@ -246,6 +246,18 @@ form label {
     font-size: 18px;
 }
 
+#list-card-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-card-btns button {
+    margin: 0 .8rem;
+    width: 45px;
+    aspect-ratio: 1/1;
+}
+
 .business-cards {
     display: block;
     max-width: 500px;
@@ -253,11 +265,12 @@ form label {
     margin: 0 auto;
 }
 
+
 .business-cards section {
-    margin: .2rem;
-    padding: 1.5rem;
+    margin: 1.2rem 0;
     background-color: #061168;
     color: #fff;
+    padding: 0 0 1.2rem 0;
 }
 
 .business-cards section p {
@@ -268,9 +281,57 @@ form label {
     color: rgb(105, 246, 227);
 }
 
-.business-cards section img {
+.img-box {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.business-cards section div img {
     max-width: 96%;
-    max-height: 120px;
+    max-height: 100px;
+}
+
+.white {
+    background-color: #fff;
+    box-shadow: 5px 5px 20px black;
+}
+
+.black {
+    background-color: #000;
+    box-shadow: 5px 5px 20px black;
+}
+
+#list {
+    display: grid;
+    max-width: 100%;
+    margin: 1.2rem 0;
+    text-align: left;
+}
+
+#list section {
+    margin: 0;
+    padding: .8rem .4rem;
+}
+
+#list section h2,
+#list section p,
+#list section a {
+    margin: .4rem 0 0 .4rem;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.7rem;
+}
+
+#list section.odd {
+    background-color: #091293;
+}
+
+#list section div {
+    display: none;
 }
 
 /*----------- FOOTER --------------*/
