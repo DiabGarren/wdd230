@@ -102,13 +102,14 @@ if (formDate == null) {} else {
     formDate.value = Date.now();
 }
 
-function displayBusinesses(business) {
+const displayBusinesses = (business) => {
     if (business.name == null) {} else {
         let card = document.createElement("section");
         let name = document.createElement("h2");
         let address = document.createElement("p");
         let phone = document.createElement("p");
         let link = document.createElement("a");
+        let imgDiv = document.createElement("div");
         let img = document.createElement("img");
 
         name.textContent = business.name;
@@ -120,12 +121,17 @@ function displayBusinesses(business) {
         link.setAttribute("href", business.link);
         link.setAttribute("target", "_blank");
         link.textContent = business.link;
+        
+        imgDiv.className = `img-box ${business.background}`;
 
         img.setAttribute("src", business.imageurl);
         img.setAttribute("alt", business.name);
         img.setAttribute("loading", "lazy");
 
-        card.appendChild(img);
+        imgDiv.appendChild(img);
+
+        card.setAttribute("class", business.row);
+        card.appendChild(imgDiv);
         card.appendChild(name);
         card.appendChild(address);
         card.appendChild(phone);
@@ -133,6 +139,14 @@ function displayBusinesses(business) {
 
         document.querySelector("div.business-cards").appendChild(card);
     }
+};
+
+const cardView = () => {
+    bussinessCards.removeAttribute("id");
+};
+
+const listView = () => {
+    bussinessCards.setAttribute("id", "list");
 };
 
 let bussinessCards = document.querySelector(".business-cards");
@@ -148,4 +162,10 @@ if (bussinessCards == null) {} else {
         businessInfo.forEach(displayBusinesses);
     }
     getBusinessInfo();
+
+    const cardBtn = document.querySelector("#card-btn");
+    cardBtn.addEventListener("click", cardView);
+
+    const listBtn = document.querySelector("#list-btn");
+    listBtn.addEventListener("click", listView);
 }
