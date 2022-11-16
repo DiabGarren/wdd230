@@ -79,10 +79,11 @@
     #join {
         grid-column: 1;
         grid-row: 3;
+        height: 87%;
     }
 
-    #join #join-big {
-        padding: .5rem 2rem;
+    #join-big {
+        padding: .5rem 0;
     }
 
     #event {

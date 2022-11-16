@@ -43,11 +43,21 @@
     #hero {
         grid-column: 1/4;
         grid-row: 1;
+        height: 250px;
+    }
+
+    #join-btn {
+        display: block;
+        width: 150px;
     }
 
     #news {
         grid-column: 1/4;
         grid-row: 2;
+    }
+
+    #news h2, #news p, #join h2 {
+        margin: .5rem 0;
     }
 
     .spotlight {
@@ -61,15 +71,19 @@
         display: block;
         grid-column: 1/4;
         grid-row: 4;
-        padding: 1.5rem 0;
+        height: 115px;
+        padding: .5rem 0 1.5rem 0;
     }
 
-    #join #join-big {
+    #join-big, #join-btn{
+        display: block;
         background-color: #1aff00;
-        color: #061168;
-        padding: .5rem 15rem;
+        padding: .5rem;
         border-radius: 15px;
+        max-width: 45%;
+        margin: .8rem auto;
     }
+
 
     #join #join-big:hover {
         background-color: #0b6f00;

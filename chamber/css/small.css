@@ -144,6 +144,11 @@ p {
     display: none;
 }
 
+#join-big a, #join-btn a {
+    color: #061168;
+    margin: 0;
+}
+
 .card #join-btn {
     background-color: #1aff00;
     color: #061168;
