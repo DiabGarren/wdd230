@@ -32,10 +32,50 @@ if (meeting == null) {} else {
     }
 }
 
-const temp = document.querySelector("#temp");
+let temp = document.querySelector("#temp");
 if (temp == null) {} else {
-    const windSpeed = document.querySelector("#wind-speed").textContent;
+    const url = "//api.openweathermap.org/data/2.5/weather?id=936374&appid=d5897d892fdcc9e1e7610ad94239af0b&units=metric";
+
+    apiFetch(url);
+}
+
+async function apiFetch(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            displayResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const displayResults = (weatherData) => {
+    const weatherIcon = document.querySelector("#weather-icon");
+    const weatherDesc = document.querySelector("#weather-desc");
+    const windSpeed = document.querySelector("#wind-speed");
     const windChill = document.querySelector("#wind-chill");
+
+    const iconSrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+    const desc = weatherData.weather[0].description;
+
+    let newDesc = "";
+    for (let i = 0; i < desc.length; i++) {
+        if (desc[i-1] == " " || desc[i] == desc[0]) {
+            newDesc += desc[i].toUpperCase();
+        } else {
+            newDesc += desc[i];
+        }
+    }
+
+    temp.textContent = weatherData.main.temp.toFixed(0);
+    windSpeed.textContent = weatherData.wind.speed;
+    weatherIcon.setAttribute("src", iconSrc);
+    weatherIcon.setAttribute("alt", newDesc);
+    weatherDesc.textContent = newDesc;
 
     const calcWindChill = (temp, windSpeed) => {
         if (temp > 10 || windSpeed < 4.8) {
@@ -49,8 +89,9 @@ if (temp == null) {} else {
             return `${windChill.toFixed(2)}°C`;
         }
     }
-    windChill.textContent = calcWindChill(temp.textContent, windSpeed);
-}
+    windChill.textContent = calcWindChill(temp.textContent, windSpeed.textContent);
+};
+
 
 let imagesToLoad = document.querySelectorAll("img[data-src]");
 if (imagesToLoad == null) {} else {

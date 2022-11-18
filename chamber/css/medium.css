@@ -99,6 +99,10 @@
         grid-column: 3/4;
         grid-row: 5;
     }
+    
+    #weather-info {
+        display: block;
+    }
 
     .disc-card {
         grid-column: 1/4;

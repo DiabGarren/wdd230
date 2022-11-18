@@ -161,6 +161,37 @@ p {
     color: #eee;
 }
 
+#weather-info div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+#weather-icon {
+    width: 80px;
+    margin: 0 auto;
+}
+
+#temp {
+    font-size: 26px;
+    margin: 0 auto;
+}
+
+#weather-desc {
+    font-size: 23px;
+    margin: 0;
+}
+
+
+#weather-bar {
+    width: 90%;
+    height: 2px;
+    background-color: #5766d7;
+    margin: 0 auto;
+}
+
 .spotlight {
     background-color: #061168;
     padding: 1.5rem;

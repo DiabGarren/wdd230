@@ -97,14 +97,14 @@
         grid-row: 2;
         text-align: left;
         height: 100%;
+        text-align: center;
     }
 
     #weather h2 {
-        padding: 0 .8rem;
+        margin: .5rem 0 0 0;
     }
-
-    #weather p {
-        padding: 0 .8rem;
+    #weather-icon {
+        width: 100px;
     }
 
     .disc-card {
