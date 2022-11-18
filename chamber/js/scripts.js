@@ -64,7 +64,7 @@ const displayResults = (weatherData) => {
 
     let newDesc = "";
     for (let i = 0; i < desc.length; i++) {
-        if (desc[i-1] == " " || desc[i] == desc[0]) {
+        if (desc[i-1] == " " || i == 0) {
             newDesc += desc[i].toUpperCase();
         } else {
             newDesc += desc[i];
