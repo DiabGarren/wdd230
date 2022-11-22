@@ -289,13 +289,14 @@ form label {
     align-items: center;
 }
 
-#list-card-btns div {
+#list-btn, #card-btn {
     display: grid;
     width: 45px;
     aspect-ratio: 1/1;
     padding: 0;
     border: 2px solid #061168;
     border-radius: 5px;
+    margin: 0 .5rem; 
 }
 
 #card-btn {
@@ -308,11 +309,11 @@ form label {
     grid-template-rows: 1fr 6px 1fr 6px 1fr 6px 1fr;
 }
 
-#list-card-btns div:hover{
+#list-btn:hover, #card-btn:hover{
     background-color: #061168;
 }
 
-#list-card-btns div:hover div{
+#list-btn:hover div, #card-btn:hover div{
     border: 2px solid #eee;
     background-color: #eee;
 }

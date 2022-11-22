@@ -129,6 +129,8 @@
         margin: .8rem 1%;
     }
 
+
+    
     .business-cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
