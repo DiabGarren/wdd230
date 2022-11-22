@@ -289,25 +289,32 @@ form label {
     align-items: center;
 }
 
-#list-card-btns button {
-    margin: 0 .8rem;
+#list-card-btns div {
+    display: grid;
     width: 45px;
     aspect-ratio: 1/1;
     padding: 0;
+    border: 2px solid #061168;
+    border-radius: 5px;
 }
 
-
-
 #card-btn {
-    display: grid;
     grid-template-columns: 1fr 10px 5px 10px 1fr;
     grid-template-rows: 1fr 10px 5px 10px 1fr;
 }
 
 #list-btn {
-    display: grid;
     grid-template-columns: 1fr 8px 1fr 24px 1fr;
     grid-template-rows: 1fr 6px 1fr 6px 1fr 6px 1fr;
+}
+
+#list-card-btns div:hover{
+    background-color: #061168;
+}
+
+#list-card-btns div:hover div{
+    border: 2px solid #eee;
+    background-color: #eee;
 }
 
 #card-btn div,
