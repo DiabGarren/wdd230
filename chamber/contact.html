@@ -6,7 +6,7 @@
     <meta name="description" content="Home page for all things related to Roodepoort area.">
     <meta name="author" content="Garren Diab">
 
-    <title>Thank You | Chamber of Commerce</title>
+    <title>Contact Us | Chamber of Commerce</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- STYLE SHEETS -->
@@ -40,8 +40,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="discover.html">Discover</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li class="active"><a href="join.html">Join</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li class="active"><a href="#">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -49,13 +49,59 @@
 
     <!-- CONTENT HERE -->
     <main>
-        <section id="thank-you">
-            <h2>Thank You</h2>
-            <p>
-                We would like to thank you for filling out our form.<br>
-                We will contact you as soon as possible.
-            </p>
-        </section>
+        <h2>Contact Information</h2>
+        <form action="thankyou.html">
+            <div id="form-content">
+                <label for="first-name">
+                    First Name
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="first-name" id="first-name" autofocus required>
+                </label>
+
+                <label for="last-name">
+                    Last Name
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="last-name" id="last-name" required>
+                </label>
+
+                <label for="organization">
+                    Organization
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="organization" id="organization" required>
+                </label>
+
+                <label for="email">
+                    Email
+                    <abbr title="The field is required">*</abbr>
+                    <input type="email" name="email" id="email" required>
+                </label>
+
+                <label for="phone">
+                    Cell Number
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="phone" id="phone" pattern="[0-9]{10}" required>
+                </label>
+
+                <label for="comments">
+                    Comments/Queries
+                    <textarea name="membership" id="membership"></textarea>
+                </label>
+
+                <label for="form-date" hidden>
+                    <input type="text" name="form-date" id="form-date">
+                </label>
+
+                <input type="submit" value="Submit" id="submit">
+            </div>
+            <div id="location">
+                <h2>Visit Us</h2>
+                <p>500 Hendrik Potgieter Road<br>
+                    Roodepoort<br>
+                    Gauteng<br>
+                    1724</p>
+                <p>Monday - Friday: 10:00 a.m. to 3:00 p.m.</p>
+            </div>
+        </form>
     </main>
 
     <!-- FOOTER HERE -->
@@ -73,6 +119,7 @@
             <a href="rel:(011)123456">(011) 123 456</a>
             <a href="https://www.google.com/maps/place/Roodepoort/@-26.0979984,27.8140581,12z/data=!3m1!4b1!4m5!3m4!1s0x1e959fc44e94e52b:0x21e34710a49d1963!8m2!3d-26.1201355!4d27.9014654"
                 target="_blank">📍Location</a>
+                <p>Time since last visit: <span id="visit"></span></p>
         </div>
         <div class="bar"></div>
         <div id="about">

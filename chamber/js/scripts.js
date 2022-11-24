@@ -190,23 +190,63 @@ const listView = () => {
     bussinessCards.setAttribute("id", "list");
 };
 
+
+let spotlightCards = document.querySelector(".spotlight");
+const displaySpotlight = (business) => {
+    if (business.name == null) {} else {
+        let card = document.createElement("article");
+        let name = document.createElement("h2");
+        let img = document.createElement("img");
+        let info = document.createElement("p");
+        let link = document.createElement("a");
+
+        name.textContent = business.name;
+
+        img.setAttribute("src", business.imageurl);
+        img.setAttribute("alt", business.name);
+        img.setAttribute("loading", "lazy");
+        img.className = `img-spotlight ${business.background}`;
+
+        link.setAttribute("href", `${business.link}`);
+        link.setAttribute("target", "_blank");
+        link.textContent = business.link;
+        
+        info.innerHTML = `${business.address}<br>`;
+        info.appendChild(link);
+        info.innerHTML += `<br>${business.phone}`;
+
+        card.className = "card";
+        card.appendChild(name);
+        card.appendChild(img);
+        card.appendChild(info);
+
+        spotlightCards.appendChild(card);
+    }
+}
+
 let bussinessCards = document.querySelector(".business-cards");
-if (bussinessCards == null) {} else {
+if (bussinessCards == null && spotlightCards == null) {} else {
     let businessInfo = [];
 
     const getBusinessInfo = async () => {
         const response = await fetch("json/data.json");
-
         businessInfo = await response.json();
 
-        displayBusinesses(businessInfo);
-        businessInfo.forEach(displayBusinesses);
+        if (bussinessCards == null) {
+            for (let i = 0; i < 2; i++) {
+                displaySpotlight(businessInfo[i]);
+            }
+        } else {
+            businessInfo.forEach(displayBusinesses);
+        }
     }
     getBusinessInfo();
 
-    const cardBtn = document.querySelector("#card-btn");
-    cardBtn.addEventListener("click", cardView);
-
-    const listBtn = document.querySelector("#list-btn");
-    listBtn.addEventListener("click", listView);
+    if (bussinessCards == null) {} else {
+        const cardBtn = document.querySelector("#card-btn");
+        cardBtn.addEventListener("click", cardView);
+    
+        const listBtn = document.querySelector("#list-btn");
+        listBtn.addEventListener("click", listView);
+    }
 }

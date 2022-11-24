@@ -125,7 +125,7 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    #member-level {
+    #member-level, #location {
         display: block;
         margin: 0 1.5rem;
     }
