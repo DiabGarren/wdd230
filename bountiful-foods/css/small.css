@@ -12,11 +12,21 @@ body {
     background-color: var(--accent-color);
     font-family: 'Nunito Sans';
 }
+
 h1 {
     font-family: 'Rubik Microbe';
     font-size: 1.6em;
     margin: 0;
 }
+h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+p {
+    margin: .2rem 0;
+}
+
 header {
     display: grid;
     grid-template-columns: 50px 1fr 60px;
@@ -49,9 +59,11 @@ header {
 #ham-1 {
     grid-row: 2;
 }
+
 #ham-2 {
     grid-row: 4;
 }
+
 #ham-3 {
     grid-row: 6;
 }
@@ -72,10 +84,12 @@ header {
     z-index: 1;
     animation: hero1-ani 15s linear infinite;
 }
+
 #hero2 img {
     z-index: 0;
     animation: hero2-ani 15s linear infinite;
 }
+
 #hero3 img {
     z-index: 0;
     animation: hero3-ani 15s linear infinite;
@@ -96,7 +110,7 @@ header {
     grid-row: 2/5;
 }
 
-#summary-img img{
+#summ-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -178,12 +192,12 @@ header {
     height: 300px;
     display: grid;
     grid-template-columns: var(--gap) repeat(2, 1fr var(--gap));
-    grid-template-rows: var(--gap) 80px var(--gap) repeat(2, 1fr var(--gap));
+    grid-template-rows: var(--gap) repeat(2, 40px) var(--gap) repeat(2, 1fr var(--gap));
 }
 
 #weather-img {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 2/4;
     margin: 0 auto;
 }
 
@@ -193,12 +207,12 @@ header {
 
 #weather-temp {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 5;
 }
 
 #weather-desc {
     grid-column: 2;
-    grid-row: 6;
+    grid-row: 7;
 }
 
 #weather-head {
@@ -206,44 +220,61 @@ header {
     grid-row: 2;
     margin: 0 auto;
 }
+
+#weather-forcast {
+    grid-column: 4;
+    grid-row: 3/8;
+}
+
 @keyframes hero1-ani {
     0% {
         z-index: 1;
     }
+
     33% {
         z-index: 0;
     }
+
     66% {
         z-index: 0;
     }
+
     100% {
         z-index: 1;
     }
 }
+
 @keyframes hero2-ani {
     0% {
         z-index: 0;
     }
+
     33% {
         z-index: 1;
     }
+
     66% {
         z-index: 0;
     }
+
     100% {
         z-index: 0;
     }
 }
+
 @keyframes hero3-ani {
     0% {
         z-index: 0;
     }
+
     33% {
         z-index: 0;
     }
+
     66% {
         z-index: 1;
     }
+
     100% {
         z-index: 0;
     }
