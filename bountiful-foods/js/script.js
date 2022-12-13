@@ -1,3 +1,13 @@
+const hamBtn = document.querySelector("#ham-menu");
+
+if (hamBtn == null) {} else {
+    const displayNav = () => {
+        const nav = document.querySelector("#nav-bar");
+        nav.classList.toggle("hidden");
+    };
+    hamBtn.addEventListener("click", displayNav);
+}
+
 const currMonth = new Date().getMonth() + 1;
 const currDay = new Date().getDate();
 

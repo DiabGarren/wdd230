@@ -2,6 +2,9 @@
     --primary-color: #2D4F25;
     --secondary-color: #106b06;
     --accent-color: #d3ffcf;
+    --nav-primary: #106b06;
+    --nav-hover: #085e02;
+    --nav-active: #2D4F25;
     --footer-color: #1c2f18;
     --button-color: #11ae06;
     --hover-color: #35952a;
@@ -75,6 +78,39 @@ header {
 
 #ham-3 {
     grid-row: 6;
+}
+
+#nav-bar {
+    grid-column: 1/4;
+    width: 100%;
+    margin: .5rem 0;
+}
+
+#nav-bar>ul {
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar>ul>li {
+    list-style-type: none;
+}
+
+#nav-bar>ul>li>a {
+    color: var(--accent-color);
+    background-color: var(--nav-primary);
+    display: block;
+    font-size: 1.3em;
+    text-decoration: none;
+    padding: .8rem 0;
+    text-align: center;
+}
+
+#nav-bar>ul>li>a:hover {
+    background-color: var(--nav-hover);
+}
+
+.active {
+    background-color: var(--nav-active) !important;
 }
 
 #hero {
@@ -244,7 +280,7 @@ header {
 #order-head>h2,
 #order1-name>h2,
 #order2-name>h2,
-#order3-name>h2{
+#order3-name>h2 {
     font-size: 1.5rem;
     font-family: 'Rubik Microbe';
 }
@@ -354,7 +390,7 @@ footer>a>img {
     grid-column: 5;
 }
 
-.hidden{
+.hidden {
     display: none !important;
 }
 
