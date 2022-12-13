@@ -11,7 +11,9 @@ body {
     background-color: var(--accent-color);
     font-family: 'Nunito Sans';
 }
-
+h1 {
+    font-size: 1.6em;
+}
 header {
     display: grid;
     grid-template-columns: 50px 1fr 60px;
