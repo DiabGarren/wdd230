@@ -27,6 +27,13 @@ p {
     margin: .2rem 0;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 header {
     display: grid;
     grid-template-columns: 50px 1fr 60px;
@@ -76,8 +83,6 @@ header {
     position: absolute;
     height: 300px;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
 }
 
 #hero1 img {
@@ -108,13 +113,6 @@ header {
 #summ-img {
     grid-column: 2;
     grid-row: 2/5;
-}
-
-#summ-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
 
 #summ-head {
@@ -179,13 +177,6 @@ header {
     grid-row: 2/7;
 }
 
-#action-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
 #weather {
     color: var(--accent-color);
     background-color: var(--primary-color);
@@ -224,6 +215,51 @@ header {
 #weather-forcast {
     grid-column: 4;
     grid-row: 3/8;
+}
+
+#order {
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    height: 350px;
+    margin: var(--gap);
+    display: grid;
+    grid-template-columns: var(--gap) repeat(2, 1fr var(--gap) 2fr var(--gap));
+    grid-template-rows: var(--gap) repeat(3, 1fr .2rem 1fr var(--gap));
+}
+
+#order > div > div{
+    border: 1px solid var(--secondary-color);
+    height: 100%;
+}
+
+#order1 {
+    grid-column: 2;
+    grid-row: 2/5;
+}
+
+#order2 {
+    grid-column: 6;
+    grid-row: 2/5;
+}
+
+#order3 {
+    grid-column: 2;
+    grid-row: 6/9;
+}
+
+#order4 {
+    grid-column: 6;
+    grid-row: 6/9;
+}
+
+#order5 {
+    grid-column: 2;
+    grid-row: 10/13;
+}
+
+#order6 {
+    grid-column: 6;
+    grid-row: 10/13;
 }
 
 @keyframes hero1-ani {
