@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #2D4F25;
+    --secondary-color: #106b06;
+    --accent-color: #d3ffcf;
+}
+
+body {
+    background-color: var(--accent-color);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    background-color: var(--primary-color);
+}
