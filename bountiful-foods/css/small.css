@@ -8,6 +8,7 @@
 }
 
 body {
+    min-width: 330px;
     background-color: var(--accent-color);
     font-family: 'Nunito Sans';
 }
