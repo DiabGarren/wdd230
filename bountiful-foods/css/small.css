@@ -2,13 +2,14 @@
     --primary-color: #2D4F25;
     --secondary-color: #106b06;
     --accent-color: #d3ffcf;
-    --button-color: #106b06;
-    --hover-color: #11ae06;
+    --button-color: #11ae06;
+    --hover-color: #35952a;
     --gap: .5rem;
 }
 
 body {
     background-color: var(--accent-color);
+    font-family: 'Nunito Sans';
 }
 
 header {
@@ -118,9 +119,9 @@ header {
 
 #action {
     color: var(--primary-color);
-    height: 300px;
+    height: 320px;
     display: grid;
-    grid-template-columns: var(--gap) 1fr 2% 1fr var(--gap);
+    grid-template-columns: var(--gap) repeat(2, 1fr var(--gap));
     grid-template-rows: var(--gap) 40px var(--gap) 1fr var(--gap) 40px var(--gap);
 }
 
@@ -148,14 +149,14 @@ header {
     grid-row: 6;
     width: 100%;
     text-align: center;
-    padding: .7rem 0;
+    padding: .6rem 0;
 }
 
 #order-but {
     color: var(--accent-color);
     background-color: var(--button-color);
     text-decoration: none;
-    padding: .7rem 35%;
+    padding: .6rem 35%;
 }
 
 #order-but:hover {
@@ -172,6 +173,35 @@ header {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+#weather {
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+    height: 300px;
+    display: grid;
+    grid-template-columns: var(--gap) repeat(2, 1fr var(--gap));
+    grid-template-rows: var(--gap) 100px var(--gap) 1fr var(--gap) 40px var(--gap);
+}
+
+#weather-img {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 auto;
+}
+
+#weather-img img {
+    height: 100%;
+}
+
+#weather-desc {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#weather-temp {
+    grid-column: 4;
+    grid-row: 2;
 }
 
 @keyframes hero1-ani {
