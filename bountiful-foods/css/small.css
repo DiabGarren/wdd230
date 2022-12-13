@@ -228,52 +228,72 @@ header {
 #orders {
     color: var(--primary-color);
     border: 2px solid var(--secondary-color);
-    height: 370px;
     margin: var(--gap);
     display: grid;
-    grid-template-columns: var(--gap) repeat(2, 1fr var(--gap) 2fr var(--gap));
-    grid-template-rows: var(--gap) 25px repeat(3, 1fr .2rem 1fr var(--gap));
-}
-
-#orders>div>div {
-    border: 1px solid var(--secondary-color);
-    height: 100%;
+    grid-template-columns: var(--gap) 1fr var(--gap);
+    grid-template-rows: var(--gap) 25px 1fr;
+    padding-bottom: var(--gap);
 }
 
 #order-head {
-    grid-column: 1/10;
+    grid-column: 1/6;
     grid-row: 1/3;
     margin: 0 auto;
 }
 
-#order1 {
-    grid-column: 2;
-    grid-row: 3/6;
+#order-head>h2,
+#order1-name>h2,
+#order2-name>h2,
+#order3-name>h2{
+    font-size: 1.5rem;
+    font-family: 'Rubik Microbe';
 }
 
-#order2 {
-    grid-column: 6;
-    grid-row: 3/6;
+#order1,
+#order2,
+#order3 {
+    display: grid;
+    grid-template-columns: 1fr var(--gap) 2fr;
+    grid-template-rows: 1fr .2rem 3fr;
 }
 
+#order1-img,
+#order2-img,
+#order3-img {
+    border: 1px solid var(--secondary-color);
+    height: 200px;
+    grid-column: 1;
+    grid-row: 1/4;
+}
+
+#order1-name,
+#order2-name,
+#order3-name {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#order1-info,
+#order2-info,
+#order3-info {
+    grid-column: 3;
+    grid-row: 3;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#order1-info>div,
+#order2-info>div,
+#order3-info>div {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+#order1,
+#order2,
 #order3 {
     grid-column: 2;
-    grid-row: 7/10;
-}
-
-#order4 {
-    grid-column: 6;
-    grid-row: 7/10;
-}
-
-#order5 {
-    grid-column: 2;
-    grid-row: 11/14;
-}
-
-#order6 {
-    grid-column: 6;
-    grid-row: 11/14;
+    margin-top: var(--gap);
 }
 
 footer {
@@ -297,23 +317,13 @@ footer>a>img {
     color: var(--accent-color);
     height: 50px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 #contact-info>a {
     text-decoration: none;
     color: var(--accent-color);
-}
-
-#contact-info>p {
-    grid-column: 1/3;
-    font-size: 1.2rem;
     margin: .2rem auto 0;
-}
-
-#phone,
-#email {
-    grid-row: 2;
 }
 
 #socials {
@@ -342,6 +352,10 @@ footer>a>img {
 
 #facebook {
     grid-column: 5;
+}
+
+.hidden{
+    display: none !important;
 }
 
 @keyframes hero1-ani {

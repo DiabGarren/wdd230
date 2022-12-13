@@ -5,23 +5,25 @@ let weather = document.querySelector("#weather");
 if (weather == null) {} else {
     const url = "//api.openweathermap.org/data/2.5/forecast?lat=33.158089&lon=-117.350594&appid=d5897d892fdcc9e1e7610ad94239af0b&units=imperial";
 
-    apiFetch(url);
+    weatherFetch(url);
 }
-async function apiFetch(url) {
+
+async function weatherFetch(url) {
     try {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            displayResults(data);
+            displayWeather(data);
+
         } else {
             throw Error(await response.text());
         }
     } catch (error) {
         console.error(error);
     }
-}
+};
 
-const displayResults = (weatherData) => {
+const displayWeather = (weatherData) => {
     const name = document.querySelector("#city");
     const weatherImg = document.querySelector("#weather-img");
     const weatherIcon = document.createElement("img");
@@ -37,8 +39,8 @@ const displayResults = (weatherData) => {
         let month = days[i].dt_txt.substring(5, 7);
         let day = days[i].dt_txt.substring(8, 10);
         let time = days[i].dt_txt.substring(11, 13);
-        if (month == currMonth && day <= currDay + 3 && time == "12") {
-            disDay ++;
+        if (month == currMonth && day <= currDay + 3 && day != currDay && time == "12") {
+            disDay++;
             let temp = days[i].main.temp;
             let high = days[i].main.temp_max;
             let low = days[i].main.temp_min;
@@ -69,4 +71,73 @@ const displayResults = (weatherData) => {
 
     weatherImg.appendChild(weatherIcon);
     weatherDesc.innerHTML = `<p>Weather Condition: ${newDesc}<br>WindSpeed: ${windSpeed}mph<br>Humidity: ${humidity}%</p>`;
+};
+
+
+let order = document.querySelector("#orders");
+if (order == null) {} else {
+    url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
+    url2 = "json/fruit-images.json";
+
+    dataFetch(url, url2);
+}
+
+async function dataFetch(url, url2) {
+    try {
+        const response = await fetch(url);
+        const response2 = await fetch(url2);
+        if (response.ok) {
+            const data = await response.json();
+            const images = await response2.json();
+            displayFruit(data, images);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const displayFruit = (fruitData, fruitImages) => {
+    let orders = window.localStorage.getItem("orders");
+    const orderContainer = document.querySelector("#orders");
+    if (orders == null) {
+        orderContainer.classList.toggle("hidden");
+    } else {
+        const orderList = orders.split(",")
+        for (let i = 1; i <= orderList.length; i++) {
+            const order = document.querySelector(`#order${i}`);
+            const orderImage = document.querySelector(`#order${i}-img`);
+            const img = document.createElement("img");
+            const orderName = document.querySelector(`#order${i}-name`);
+            const orderCarb = document.querySelector(`#order${i}-carb`);
+            const orderProtein = document.querySelector(`#order${i}-protein`);
+            const orderFat = document.querySelector(`#order${i}-fat`);
+            const orderCal = document.querySelector(`#order${i}-cal`);
+            const orderSugar = document.querySelector(`#order${i}-sugar`);
+
+            let pos = 0;
+            for (let j = 0; j < fruitData.length; j++) {
+                if (fruitData[j].name == orderList[i-1]) {
+                    pos = j;
+                    break;
+                }
+            }
+
+            order.classList.toggle("hidden");
+
+            orderName.innerHTML = `<h2>${fruitData[pos].name} Smoothie</h2>`;
+            orderCarb.innerHTML = `<p>carbohydrates:</p><p>${fruitData[pos].nutritions.carbohydrates}g</p>`;
+            orderProtein.innerHTML = `<p>Protein:</p><p>${fruitData[pos].nutritions.protein}g</p>`;
+            orderFat.innerHTML = `<p>Fat:</p><p>${fruitData[pos].nutritions.fat}g</p>`;
+            orderCal.innerHTML = `<p>Calories:</p><p>${fruitData[pos].nutritions.calories}</p>`;
+            orderSugar.innerHTML = `<p>Sugar:</p><p>${fruitData[pos].nutritions.sugar}g</p>`;
+
+            img.setAttribute("src", `${fruitImages[pos].image}`);
+            img.setAttribute("alt", orderName.textContent);
+
+            orderImage.innerHTML = "";
+            orderImage.appendChild(img);
+        }
+    }
 };
