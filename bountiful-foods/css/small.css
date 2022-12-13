@@ -12,7 +12,9 @@ body {
     font-family: 'Nunito Sans';
 }
 h1 {
+    font-family: 'Rubik Microbe';
     font-size: 1.6em;
+    margin: 0;
 }
 header {
     display: grid;
@@ -106,10 +108,6 @@ header {
     margin: 0 auto;
 }
 
-#summ-head h1 {
-    margin: 0;
-}
-
 #summ-info {
     grid-column: 4;
     grid-row: 4;
@@ -131,10 +129,6 @@ header {
     grid-column: 2;
     grid-row: 2;
     margin: 0 auto;
-}
-
-#action-head h1 {
-    margin: 0;
 }
 
 #action-info {
@@ -183,7 +177,7 @@ header {
     height: 300px;
     display: grid;
     grid-template-columns: var(--gap) repeat(2, 1fr var(--gap));
-    grid-template-rows: var(--gap) 100px var(--gap) 1fr var(--gap) 40px var(--gap);
+    grid-template-rows: var(--gap) 80px var(--gap) repeat(2, 1fr var(--gap));
 }
 
 #weather-img {
@@ -196,16 +190,21 @@ header {
     height: 100%;
 }
 
-#weather-desc {
+#weather-temp {
     grid-column: 2;
     grid-row: 4;
 }
 
-#weather-temp {
-    grid-column: 4;
-    grid-row: 2;
+#weather-desc {
+    grid-column: 2;
+    grid-row: 6;
 }
 
+#weather-head {
+    grid-column: 4;
+    grid-row: 2;
+    margin: 0 auto;
+}
 @keyframes hero1-ani {
     0% {
         z-index: 1;
