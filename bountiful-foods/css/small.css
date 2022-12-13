@@ -47,6 +47,10 @@ header {
     grid-row: 6;
 }
 
+#hero {
+    height: 300px;
+}
+
 #hero img {
     position: absolute;
     height: 300px;
@@ -67,6 +71,46 @@ header {
     z-index: 0;
     animation: hero3-ani 15s linear infinite;
 }
+
+#summary {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    width: 100%;
+    display: grid;
+    grid-template-columns: .5rem 1fr .5rem 1fr .5rem;
+    grid-template-rows: .5rem 40px .5rem 1fr .5rem;
+}
+
+#summ-img {
+    grid-column: 2;
+    grid-row: 2/5;
+}
+
+#summary-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#summ-head {
+    grid-column: 4;
+    grid-row: 2;
+    margin: 0 auto;
+}
+
+#summ-head h1 {
+    margin: 0;
+}
+
+#summ-info {
+    grid-column: 4;
+    grid-row: 4;
+}
+#summ-info p {
+    margin: .2rem;
+}
+
 
 @keyframes hero1-ani {
     0% {
