@@ -1,6 +1,7 @@
 let weather = document.querySelector("#weather");
 if (weather == null) {} else {
-    const url = "//api.openweathermap.org/data/2.5/weather?id=936374&appid=d5897d892fdcc9e1e7610ad94239af0b&units=metric";
+    // api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}&appid={API key}
+    const url = "//api.openweathermap.org/data/2.5/forecast?lat=33.158089&lon=-117.350594&appid=d5897d892fdcc9e1e7610ad94239af0b&units=metric";
 
     apiFetch(url);
 }
@@ -20,16 +21,19 @@ async function apiFetch(url) {
 
 const displayResults = (weatherData) => {
     console.log(weatherData);
+    const name = document.querySelector("#city");
     const weatherImg = document.querySelector("#weather-img");
     const weatherIcon = document.createElement("img");
     const weatherDesc = document.querySelector("#weather-desc");
     const temp = document.querySelector("#weather-temp");
     const forcast = document.querySelector("#weather-forcast");
 
-    const iconSrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-    const desc = weatherData.weather[0].description;
-    const windSpeed = weatherData.wind.speed;
-    const humidity = weatherData.main.humidity;
+    const city = weatherData.city.name;
+    
+    const iconSrc = `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
+    const desc = weatherData.list[0].weather[0].description;
+    const windSpeed = weatherData.list[0].wind.speed;
+    const humidity = weatherData.list[0].main.humidity;
 
     let newDesc = "";
     for (let i = 0; i < desc.length; i++) {
@@ -42,9 +46,11 @@ const displayResults = (weatherData) => {
     weatherIcon.setAttribute("src", iconSrc);
     weatherIcon.setAttribute("alt", newDesc);
 
-    temp.innerHTML = `Temperature: ${weatherData.main.temp.toFixed(0)}&#8451<br>
-    Feels like: ${weatherData.main.feels_like.toFixed(0)}&#8451<br>
-    High / Low: ${weatherData.main.temp_max.toFixed(0)}&#8451 / ${weatherData.main.temp_min.toFixed(0)}&#8451`;
+    name.textContent = city;
+
+    temp.innerHTML = `Temperature: ${weatherData.list[0].main.temp.toFixed(0)}&#8451<br>
+    Feels like: ${weatherData.list[0].main.feels_like.toFixed(0)}&#8451<br>
+    High / Low: ${weatherData.list[0].main.temp_max.toFixed(0)}&#8451 / ${weatherData.list[0].main.temp_min.toFixed(0)}&#8451`;
 
     weatherImg.appendChild(weatherIcon);
     weatherDesc.innerHTML = `Weather Condition: ${newDesc}<br>
