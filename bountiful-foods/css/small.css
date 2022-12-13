@@ -62,8 +62,9 @@ header {
 }
 
 #ham-menu>div {
-    height: 100%;
     background-color: var(--accent-color);
+    height: 100%;
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
     grid-column: 2;
 }
@@ -78,6 +79,32 @@ header {
 
 #ham-3 {
     grid-row: 6;
+}
+
+#cross-menu {
+    height: 100%;
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 15% repeat(5, 1fr) 15%;
+    grid-column: 3;
+    margin: 0 auto;
+}
+#cross-menu>div {
+    background-color: var(--accent-color);
+    height: 100%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    grid-column: 2;
+}
+#cross-1 {
+    grid-row: 3;
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+#cross-2{
+    grid-row:5;
+    transform: rotate(-45deg) translate(5px, -6px);;
 }
 
 #nav-bar {

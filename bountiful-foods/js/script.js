@@ -1,11 +1,15 @@
 const hamBtn = document.querySelector("#ham-menu");
+const cross = document.querySelector("#cross-menu");
 
 if (hamBtn == null) {} else {
     const displayNav = () => {
         const nav = document.querySelector("#nav-bar");
         nav.classList.toggle("hidden");
+        hamBtn.classList.toggle("hidden");
+        cross.classList.toggle("hidden");
     };
     hamBtn.addEventListener("click", displayNav);
+    cross.addEventListener("click", displayNav);
 }
 
 const currMonth = new Date().getMonth() + 1;
