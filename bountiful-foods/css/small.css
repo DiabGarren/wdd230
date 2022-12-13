@@ -2,6 +2,7 @@
     --primary-color: #2D4F25;
     --secondary-color: #106b06;
     --accent-color: #d3ffcf;
+    --footer-color: #1c2f18;
     --button-color: #11ae06;
     --hover-color: #35952a;
     --gap: .5rem;
@@ -18,6 +19,7 @@ h1 {
     font-size: 1.6em;
     margin: 0;
 }
+
 h2 {
     font-size: 1rem;
     margin: 0;
@@ -241,7 +243,7 @@ header {
     grid-template-rows: var(--gap) 25px repeat(3, 1fr .2rem 1fr var(--gap));
 }
 
-#orders > div > div{
+#orders>div>div {
     border: 1px solid var(--secondary-color);
     height: 100%;
 }
@@ -280,6 +282,74 @@ header {
 #order6 {
     grid-column: 6;
     grid-row: 11/14;
+}
+
+footer {
+    background-color: var(--footer-color);
+    height: 50px;
+    display: grid;
+    grid-template-columns: 50px 2fr 1fr;
+}
+
+footer>a {
+    height: 50px;
+}
+
+footer>a>img {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+
+#contact-info {
+    color: var(--accent-color);
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#contact-info>a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+#contact-info > p {
+    grid-column: 1/3;
+    font-size: 1.2rem;
+    margin: .2rem auto 0;
+}
+
+#phone,
+#email {
+    grid-row: 2;
+}
+
+#socials {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 50px var(--gap)) 50px;
+}
+
+#socials>a {
+    height: 50px;
+}
+
+#socials>a>img {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+#instagram {
+    grid-column: 1;
+}
+
+#twitter {
+    grid-column: 3;
+}
+
+#facebook {
+    grid-column: 5;
 }
 
 @keyframes hero1-ani {
