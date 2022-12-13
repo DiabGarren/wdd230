@@ -47,10 +47,6 @@ header {
     grid-row: 6;
 }
 
-#hero {
-    height: 300px;
-}
-
 #hero img {
     position: absolute;
     height: 300px;

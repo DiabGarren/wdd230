@@ -2,4 +2,8 @@
     #ham-menu {
         display: none;
     }
+
+    #hero img {
+        height: 500px;
+    }
 }
