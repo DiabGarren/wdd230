@@ -49,12 +49,68 @@ header {
 
 #hero {
     height: 300px;
-    background-color: var(--secondary-color);
 }
 
 #hero img {
+    position: absolute;
+    height: 300px;
     width: 100%;
-    height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+#hero1 img {
+    z-index: 1;
+    animation: hero1-ani 15s linear infinite;
+}
+#hero2 img {
+    z-index: 0;
+    animation: hero2-ani 15s linear infinite;
+}
+#hero3 img {
+    z-index: 0;
+    animation: hero3-ani 15s linear infinite;
+}
+
+@keyframes hero1-ani {
+    0% {
+        z-index: 1;
+    }
+    33% {
+        z-index: 0;
+    }
+    66% {
+        z-index: 0;
+    }
+    100% {
+        z-index: 1;
+    }
+}
+@keyframes hero2-ani {
+    0% {
+        z-index: 0;
+    }
+    33% {
+        z-index: 1;
+    }
+    66% {
+        z-index: 0;
+    }
+    100% {
+        z-index: 0;
+    }
+}
+@keyframes hero3-ani {
+    0% {
+        z-index: 0;
+    }
+    33% {
+        z-index: 0;
+    }
+    66% {
+        z-index: 1;
+    }
+    100% {
+        z-index: 0;
+    }
 }
