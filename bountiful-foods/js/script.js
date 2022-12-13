@@ -31,17 +31,19 @@ const displayResults = (weatherData) => {
 
     const city = weatherData.city.name;
     const days = weatherData.list;
+    let disDay = 0;
     for (let i = 0; i < days.length; i++) {
         let year = days[i].dt_txt.substring(0, 4);
         let month = days[i].dt_txt.substring(5, 7);
         let day = days[i].dt_txt.substring(8, 10);
         let time = days[i].dt_txt.substring(11, 13);
         if (month == currMonth && day <= currDay + 3 && time == "12") {
+            disDay ++;
             let temp = days[i].main.temp;
             let high = days[i].main.temp_max;
             let low = days[i].main.temp_min;
-            forcast.innerHTML += `<h2>${year}-${month}-${day}</h2>
-            <p>Temp @ Noon: <b>${temp}&#8457</b><br>High / Low: ${high}&#8457 / ${low}&#8457<br><br></p>`;
+            forcast.innerHTML += `<div id=day${disDay}><h2>${year}-${month}-${day}</h2>
+            <p>Temp @ Noon: <b>${temp}&#8457</b><br>High / Low: ${high}&#8457 / ${low}&#8457</p></div>`;
         }
     }
 
