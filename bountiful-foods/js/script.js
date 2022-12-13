@@ -22,7 +22,6 @@ async function apiFetch(url) {
 }
 
 const displayResults = (weatherData) => {
-    console.log(weatherData);
     const name = document.querySelector("#city");
     const weatherImg = document.querySelector("#weather-img");
     const weatherIcon = document.createElement("img");
