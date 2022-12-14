@@ -93,17 +93,17 @@ if (order == null) {} else {
     url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
     url2 = "json/fruit-images.json";
 
-    dataFetch(url, url2);
+    orderFetch(url, url2);
 }
 
-async function dataFetch(url, url2) {
+async function orderFetch(url, url2) {
     try {
         const response = await fetch(url);
         const response2 = await fetch(url2);
         if (response.ok) {
             const data = await response.json();
             const images = await response2.json();
-            displayFruit(data, images);
+            displayOrder(data, images);
         } else {
             throw Error(await response.text());
         }
@@ -112,8 +112,8 @@ async function dataFetch(url, url2) {
     }
 };
 
-const displayFruit = (fruitData, fruitImages) => {
-    let orders = window.localStorage.getItem("orders");
+const displayOrder = (fruitData, fruitImages) => {
+    let orders = window.localStorage.getItem("fruitList");
     const orderContainer = document.querySelector("#orders");
     if (orders == null) {
         orderContainer.classList.toggle("hidden");
@@ -132,7 +132,7 @@ const displayFruit = (fruitData, fruitImages) => {
 
             let pos = 0;
             for (let j = 0; j < fruitData.length; j++) {
-                if (fruitData[j].name == orderList[i-1]) {
+                if (fruitData[j].name == orderList[i - 1]) {
                     pos = j;
                     break;
                 }
@@ -140,7 +140,7 @@ const displayFruit = (fruitData, fruitImages) => {
 
             order.classList.toggle("hidden");
 
-            orderName.innerHTML = `<h2>${fruitData[pos].name} Smoothie</h2>`;
+            orderName.innerHTML = `<h2>${fruitData[pos].name}</h2>`;
             orderCarb.innerHTML = `<p>carbohydrates:</p><p>${fruitData[pos].nutritions.carbohydrates}g</p>`;
             orderProtein.innerHTML = `<p>Protein:</p><p>${fruitData[pos].nutritions.protein}g</p>`;
             orderFat.innerHTML = `<p>Fat:</p><p>${fruitData[pos].nutritions.fat}g</p>`;
@@ -155,3 +155,43 @@ const displayFruit = (fruitData, fruitImages) => {
         }
     }
 };
+
+let form = document.querySelector("#form");
+if (form == null) {} else {
+    url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
+
+    fruitFetch(url);
+}
+
+async function fruitFetch(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            displayFruit(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const displayFruit = (fruitData) => {
+    let fruit1 = document.querySelector("#fruit1");
+    let fruit2 = document.querySelector("#fruit2");
+    let fruit3 = document.querySelector("#fruit3");
+    for (let i = 0; i < fruitData.length; i++) {
+        fruit1.innerHTML += `<option value="${fruitData[i].name}">${fruitData[i].name}</option>`;
+        fruit2.innerHTML += `<option value="${fruitData[i].name}">${fruitData[i].name}</option>`;
+        fruit3.innerHTML += `<option value="${fruitData[i].name}">${fruitData[i].name}</option>`;
+    }
+}
+
+const submitForm = () => {
+    const firstName = document.querySelector("#first-name").value;
+    document.querySelector("#confirm-name").textContent = firstName;
+    window.localStorage.setItem('fruitList', `${fruit1.value},${fruit2.value},${fruit3.value}`);
+    form.classList.toggle("hidden");
+    document.querySelector("#confirm").classList.toggle("hidden");
+}

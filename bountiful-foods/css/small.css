@@ -11,6 +11,10 @@
     --gap: .5rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 330px;
     background-color: var(--accent-color);
@@ -219,9 +223,11 @@ header {
 }
 
 #order-but {
-    color: var(--accent-color);
+    color: #000;
+    font-weight: bold;
     background-color: var(--button-color);
     text-decoration: none;
+    border-radius: 5px;
     padding: .6rem 35%;
 }
 
@@ -358,6 +364,79 @@ header {
     grid-column: 2;
     margin-top: var(--gap);
 }
+
+
+form {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: .8rem 1rem;
+    margin: .8rem 0;
+}
+
+#form-content {
+    border: 3px solid var(--footer-color);
+    border-radius: 10px;
+    padding: 1rem .5rem;
+}
+
+form>div>label>input,
+form>div>label>select,
+form>div>label>textarea {
+    margin: .2rem 0 1.25rem;
+}
+
+form>div>label,
+form>div>input {
+    display: block;
+    margin: 0 2%;
+}
+
+#first-name,
+#email,
+#phone,
+#instructions{
+    width: 98%;
+}
+
+#submit {
+    width: 96%
+}
+
+#confirm {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: .8rem 1rem;
+    margin: .8rem 0;
+}
+#confirm>div {
+    border: 2px solid var(--footer-color);
+    border-radius: 10px;
+    padding: 1rem .5rem;
+    text-align: center;
+}
+
+#confirm>div>h2 {
+    font-family: 'Rubik Microbe';
+    font-size: 1.3rem;
+}
+
+#confirm>div>p {
+    margin-bottom: .8rem;
+}
+
+#confirm>div>a {
+    color: #000;
+    font-weight: bold;
+    background-color: var(--button-color);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: .2rem 2rem;
+}
+
+#confirm>div>a:hover {
+    background-color: var(--hover-color);
+}
+
 
 footer {
     background-color: var(--footer-color);

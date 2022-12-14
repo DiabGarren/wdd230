@@ -50,6 +50,59 @@
         </nav>
     </header>
     <main>
+        <form action="javascript:submitForm()" id="form">
+            <div id="form-content">
+                <label for="first-name">
+                    First Name
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="first-name" id="first-name" autofocus required>
+                </label>
+                
+                <label for="email">
+                    Email
+                    <abbr title="The field is required">*</abbr>
+                    <input type="email" name="email" id="email" required>
+                </label>
+
+                <label for="phone">
+                    Cell Number
+                    <abbr title="The field is required">*</abbr>
+                    <input type="text" name="phone" id="phone" pattern="[0-9]{10}" required>
+                </label>
+
+                <label for="fruit1">
+                    Fruit choice
+                    <select name="fruit1" id="fruit1">
+                    </select>
+                </label>
+                <label for="fruit2">
+                    Fruit choice
+                    <select name="fruit2" id="fruit2">
+                    </select>
+                </label>
+                <label for="fruit3">
+                    Fruit choice
+                    <select name="fruit3" id="fruit3">
+                    </select>
+                </label>
+
+                <label for="instructions">
+                    Special Instructions
+                    <textarea name="instructions" id="instructions"></textarea>
+                </label>
+
+                <input type="submit" value="submit" id="submit">
+            </div>
+        </form>
+
+        <div id="confirm" class="hidden">
+            <div>
+                <h2>Thank you <span id="confirm-name"></span> for placing an order!</h2>
+                <p>We will get to your order as soon as possible.<br>
+                For now you can view your order on the home page.</p>
+                <a href="index.html#orders">View your Order</a>
+            </div>
+        </div>
     </main>
     
     <footer>
