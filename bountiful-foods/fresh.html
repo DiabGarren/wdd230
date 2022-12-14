@@ -107,7 +107,11 @@
     
     <footer>
         <a href="index.html">
-            <img src="images/logo50.png" alt="Bountiful Foods Logo">
+            <picture>
+                <source media="(max-width:560px)" srcset="images/logo50.png">
+                <source media="(max-width:1024px)" srcset="images/logo75.png">
+                <img src="images/logo100.png" alt="Bountiful Foods Logo" id="logo">
+            </picture>
         </a>
         <div id="contact-info">
             <a href="" id="phone">tel: +1 (760)-123-456</a>

@@ -114,7 +114,6 @@ header {
 #nav-bar {
     grid-column: 1/4;
     width: 100%;
-    margin: .5rem 0;
 }
 
 #nav-bar>ul {
@@ -169,13 +168,16 @@ header {
     animation: hero3-ani 15s linear infinite;
 }
 
-#summary {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
-    width: 100%;
-    height: 200px;
+#content {
     display: grid;
-    grid-template-columns: var(--gap) 1fr var(--gap) 1fr var(--gap);
+    grid-template-rows: 200px 320px 330px 1fr;
+}
+
+#summary {
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: var(--gap) repeat(2, 1fr var(--gap));
     grid-template-rows: var(--gap) 40px var(--gap) 1fr var(--gap);
 }
 
@@ -197,7 +199,6 @@ header {
 
 #action {
     color: var(--primary-color);
-    height: 320px;
     display: grid;
     grid-template-columns: var(--gap) repeat(2, 1fr var(--gap));
     grid-template-rows: var(--gap) 40px var(--gap) 1fr var(--gap) 40px var(--gap);
@@ -217,15 +218,14 @@ header {
 #action-but {
     grid-column: 2;
     grid-row: 6;
-    width: 100%;
     text-align: center;
     padding: .6rem 0;
 }
 
 #order-but {
     color: #000;
-    font-weight: bold;
     background-color: var(--button-color);
+    font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
     padding: .6rem 35%;
@@ -243,7 +243,6 @@ header {
 #weather {
     color: var(--accent-color);
     background-color: var(--primary-color);
-    height: 330px;
     display: grid;
     grid-template-columns: var(--gap) 2fr var(--gap) 3fr var(--gap);
     grid-template-rows: var(--gap) repeat(2, 40px) var(--gap) repeat(2, 1fr var(--gap));
@@ -367,8 +366,8 @@ header {
 
 
 form {
-    background-color: var(--primary-color);
     color: var(--accent-color);
+    background-color: var(--primary-color);
     padding: .8rem 1rem;
     margin: .8rem 0;
 }
@@ -403,8 +402,8 @@ form>div>input {
 }
 
 #confirm {
-    background-color: var(--primary-color);
     color: var(--accent-color);
+    background-color: var(--primary-color);
     padding: .8rem 1rem;
     margin: .8rem 0;
 }
@@ -426,8 +425,8 @@ form>div>input {
 
 #confirm>div>a {
     color: #000;
-    font-weight: bold;
     background-color: var(--button-color);
+    font-weight: bold;
     border-radius: 5px;
     text-decoration: none;
     padding: .2rem 2rem;
@@ -473,8 +472,8 @@ form>div>input {
     grid-row: 6;
 }
 #contact {
-    background-color: var(--primary-color);
     color: var(--accent-color);
+    background-color: var(--primary-color);
     padding: .5rem;
 }
 
@@ -518,15 +517,15 @@ footer {
     background-color: var(--footer-color);
     height: 100px;
     display: grid;
-    grid-template-columns: 50px 2fr 1fr;
-    grid-row: 50px 50px;
+    grid-template-columns: 50px 1fr calc(50px + var(--gap) + 50px + var(--gap) + 50px);
+    grid-row: repeat(2, 50px);
 }
 
 footer>a {
     height: 50px;
 }
 
-footer>a>img {
+footer>a>picture>img {
     height: 40px;
     width: 40px;
     margin: 5px;
@@ -541,8 +540,8 @@ footer>a>img {
 }
 
 #contact-info>a {
-    text-decoration: none;
     color: var(--accent-color);
+    text-decoration: none;
     margin: .2rem auto 0;
 }
 

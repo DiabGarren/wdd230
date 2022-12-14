@@ -53,108 +53,111 @@
         <div id="hero">
             <picture id="hero1">
                 <source media="(max-width:560px)" srcset="images/hero1-small.jpg">
-                <source media="(max-width:1024px)" srcset="images/hero1-1024.jpg">
+                <source media="(max-width:1024px)" srcset="images/hero1-medium.jpg">
                 <img src="images/hero1.jpg" alt="Hero image 1">
             </picture>
             <picture id="hero2">
                 <source media="(max-width:560px)" srcset="images/hero2-small.jpg">
-                <source media="(max-width:1024px)" srcset="images/hero2-1024.jpg">
+                <source media="(max-width:1024px)" srcset="images/hero2-medium.jpg">
                 <img src="images/hero2.jpg" alt="Hero image 2">
             </picture>
             <picture id="hero3">
                 <source media="(max-width:560px)" srcset="images/hero3-small.jpg">
-                <source media="(max-width:1024px)" srcset="images/hero3-1024.jpg">
+                <source media="(max-width:1024px)" srcset="images/hero3-medium.jpg">
                 <img src="images/hero3.jpg" alt="Hero image 3">
             </picture>
         </div>
+        <div id="content">
+            <div id="summary">
+                <div id="summ-img">
+                    <picture>
+                        <source media="(max-width:560px)" srcset="images/summary-small.jpg">
+                        <source media="(max-width:1024px)" srcset="images/summary-medium.jpg">
+                        <img src="images/summary.jpg" alt="Summary image">
+                    </picture>
+                </div>
+                <div id="summ-head">
+                    <h1>About Carlsbad</h1>
+                </div>
+                <div id="summ-info">
+                    <p>Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Nulla
+                        quis
+                        lorem ut libero malesuada feugiat.</p>
+                </div>
+            </div>
 
-        <div id="summary">
-            <div id="summ-img">
-                <picture>
-                    <source media="(max-width:560px)" srcset="images/summary-small.jpg">
-                    <source media="(max-width:1024px)" srcset="images/summary-1024.jpg">
-                    <img src="images/summary.jpg" alt="Summary image">
-                </picture>
+            <div id="action">
+                <div id="action-head">
+                    <h1>Order Now!</h1>
+                </div>
+                <div id="action-info">
+                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed
+                        magna
+                        dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+                </div>
+                <div id="action-but">
+                    <a href="fresh.html" id="order-but">
+                        ORDER
+                    </a>
+                </div>
+                <div id="action-img">
+                    <picture>
+                        <source media="(max-width:560px)" srcset="images/action-560.jpg">
+                        <source media="(max-width:1024px)" srcset="images/action-medium.jpg">
+                        <img src="images/action.jpg" alt="Order image">
+                    </picture>
+                </div>
             </div>
-            <div id="summ-head">
-                <h1>About Carlsbad</h1>
-            </div>
-            <div id="summ-info">
-                <p>Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Nulla quis
-                    lorem ut libero malesuada feugiat.</p>
-            </div>
-        </div>
 
-        <div id="action">
-            <div id="action-head">
-                <h1>Order Now!</h1>
+            <div id="weather">
+                <div id="weather-img"></div>
+                <div id="weather-temp"></div>
+                <div id="weather-desc"></div>
+                <div id="weather-head">
+                    <h1 id="city">Weather</h1>
+                </div>
+                <div id="weather-forcast"></div>
             </div>
-            <div id="action-info">
-                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna
-                    dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-            </div>
-            <div id="action-but">
-                <a href="fresh.html" id="order-but">
-                    ORDER
-                </a>
-            </div>
-            <div id="action-img">
-                <picture>
-                    <source media="(max-width:560px)" srcset="images/action-560.jpg">
-                    <source media="(max-width:1024px)" srcset="images/action-1024.jpg">
-                    <img src="images/action.jpg" alt="Order image">
-                </picture>
-            </div>
-        </div>
 
-        <div id="weather">
-            <div id="weather-img"></div>
-            <div id="weather-temp"></div>
-            <div id="weather-desc"></div>
-            <div id="weather-head">
-                <h1 id="city">Weather</h1>
-            </div>
-            <div id="weather-forcast"></div>
-        </div>
-
-        <div id="orders">
-            <section id="order-head">
-                <h2>My Order</h2>
-            </section>
-            <div id="order1" class="hidden">
-                <div id="order1-img">
+            <div id="orders">
+                <section id="order-head">
+                    <h2>My Order</h2>
+                </section>
+                <div id="order1" class="hidden">
+                    <div id="order1-img">
+                    </div>
+                    <div id="order1-name"></div>
+                    <div id="order1-info">
+                        <div id="order1-carb"></div>
+                        <div id="order1-protein"></div>
+                        <div id="order1-fat"></div>
+                        <div id="order1-cal"></div>
+                        <div id="order1-sugar"></div>
+                    </div>
                 </div>
-                <div id="order1-name"></div>
-                <div id="order1-info">
-                    <div id="order1-carb"></div>
-                    <div id="order1-protein"></div>
-                    <div id="order1-fat"></div>
-                    <div id="order1-cal"></div>
-                    <div id="order1-sugar"></div>
+                <div id="order2" class="hidden">
+                    <div id="order2-img">
+                    </div>
+                    <div id="order2-name"></div>
+                    <div id="order2-info">
+                        <div id="order2-carb"></div>
+                        <div id="order2-protein"></div>
+                        <div id="order2-fat"></div>
+                        <div id="order2-cal"></div>
+                        <div id="order2-sugar"></div>
+                    </div>
                 </div>
-            </div>
-            <div id="order2" class="hidden">
-                <div id="order2-img">
-                </div>
-                <div id="order2-name"></div>
-                <div id="order2-info">
-                    <div id="order2-carb"></div>
-                    <div id="order2-protein"></div>
-                    <div id="order2-fat"></div>
-                    <div id="order2-cal"></div>
-                    <div id="order2-sugar"></div>
-                </div>
-            </div>
-            <div id="order3" class="hidden">
-                <div id="order3-img">
-                </div>
-                <div id="order3-name"></div>
-                <div id="order3-info">
-                    <div id="order3-carb"></div>
-                    <div id="order3-protein"></div>
-                    <div id="order3-fat"></div>
-                    <div id="order3-cal"></div>
-                    <div id="order3-sugar"></div>
+                <div id="order3" class="hidden">
+                    <div id="order3-img">
+                    </div>
+                    <div id="order3-name"></div>
+                    <div id="order3-info">
+                        <div id="order3-carb"></div>
+                        <div id="order3-protein"></div>
+                        <div id="order3-fat"></div>
+                        <div id="order3-cal"></div>
+                        <div id="order3-sugar"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -162,7 +165,11 @@
 
     <footer>
         <a href="index.html">
-            <img src="images/logo50.png" alt="Bountiful Foods Logo">
+            <picture>
+                <source media="(max-width:560px)" srcset="images/logo50.png">
+                <source media="(max-width:1024px)" srcset="images/logo75.png">
+                <img src="images/logo100.png" alt="Bountiful Foods Logo" id="logo">
+            </picture>
         </a>
         <div id="contact-info">
             <a href="" id="phone">tel: +1 (760)-123-456</a>
