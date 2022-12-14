@@ -16,10 +16,6 @@
         grid-template-columns: 75px 1fr;
     }
 
-    p {
-        font-size: 1rem;
-    }
-
     #top-logo {
         width: 90%;
         margin: 5%;
@@ -40,18 +36,23 @@
         display: none;
     }
 
-    #hero img {
-        height: 500px;
-    }
-
     #content {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 360px 1fr 320px;
+        grid-template-rows: 500px 360px 1fr 320px;
+    }
+
+    #hero {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    #hero >picture>img {
+        height: 500px;
     }
 
     #summary {
         grid-column: 2;
-        grid-row: 1;
+        grid-row: 2;
     }
 
     #summ-img {
@@ -65,12 +66,12 @@
 
     #weather {
         grid-column: 1;
-        grid-row: 1;
+        grid-row: 2;
     }
 
     #orders {
         grid-column: 1/3;
-        grid-row: 2;
+        grid-row: 3;
     }
 
     #order1,
@@ -83,7 +84,7 @@
 
     #action {
         grid-column: 1/3;
-        grid-row: 3;
+        grid-row: 4;
         color: var(--accent-color);
         background-color: var(--primary-color);
     }
@@ -101,11 +102,11 @@
         grid-template-columns: 75px 1fr calc(50px + var(--gap) + 50px + var(--gap) + 50px);
         grid-template-rows: 50px 50px;
     }
-    
+
     footer>a {
         height: 75px;
     }
-    
+
     footer>a>picture>img {
         height: 65px;
         width: 65px;
@@ -115,17 +116,17 @@
     #contact-info {
         height: 50px;
     }
-    
+
     #socials {
         height: 50px;
         display: grid;
         grid-template-columns: repeat(2, 50px var(--gap)) 50px;
     }
-    
+
     #socials>a {
         height: 50px;
     }
-    
+
     #socials>a>img {
         margin: 5px;
         height: 40px;

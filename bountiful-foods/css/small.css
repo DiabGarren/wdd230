@@ -143,14 +143,18 @@ header {
     background-color: var(--nav-active) !important;
 }
 
+#content {
+    display: grid;
+    grid-template-rows: 300px 200px 320px 330px 1fr;
+}
+
 #hero {
-    height: 300px;
+    grid-row: 1;
 }
 
 #hero>picture>img {
     position: absolute;
     height: 300px;
-    width: 100%;
 }
 
 #hero1>img {
@@ -166,11 +170,6 @@ header {
 #hero3>img {
     z-index: 0;
     animation: hero3-ani 15s linear infinite;
-}
-
-#content {
-    display: grid;
-    grid-template-rows: 200px 320px 330px 1fr;
 }
 
 #summary {
