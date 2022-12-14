@@ -1,3 +1,9 @@
+const edited = document.querySelector("#edited");
+if (edited == null) {} else {
+    document.querySelector("#year").textContent = new Date().getFullYear();
+    document.querySelector("#updated").textContent = document.lastModified;
+}
+
 const hamBtn = document.querySelector("#ham-menu");
 const cross = document.querySelector("#cross-menu");
 
