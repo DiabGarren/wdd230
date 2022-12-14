@@ -517,7 +517,7 @@ footer {
     height: 100px;
     display: grid;
     grid-template-columns: 50px 1fr calc(50px + var(--gap) + 50px + var(--gap) + 50px);
-    grid-row: repeat(2, 50px);
+    grid-template-rows: repeat(2, 50px);
 }
 
 footer>a {
