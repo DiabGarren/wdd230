@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #2D4F25;
+    --secondary-color: #106b06;
+    --accent-color: #d3ffcf;
+    --nav-primary: #106b06;
+    --nav-hover: #085e02;
+    --nav-active: #2D4F25;
+    --footer-color: #1c2f18;
+    --button-color: #11ae06;
+    --hover-color: #35952a;
+    --gap: .5rem;
+}
+@media only screen and (min-width: 1025px){
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    #ham-menu {
+        display: none;
+    }
+}
