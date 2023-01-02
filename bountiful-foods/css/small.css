@@ -63,6 +63,11 @@ header {
     color: var(--accent-color);
 }
 
+#heading::after {
+    content: attr(data-end);
+    animation: text-bar 1s linear 0s infinite;
+}
+
 #ham-menu {
     height: 100%;
     aspect-ratio: 1/1;
@@ -102,6 +107,7 @@ header {
     grid-column: 3;
     margin: 0 auto;
 }
+
 #cross-menu>div {
     background-color: var(--accent-color);
     height: 100%;
@@ -109,14 +115,16 @@ header {
     border-radius: 15px;
     grid-column: 2;
 }
+
 #cross-1 {
     grid-row: 3;
     transform: rotate(45deg) translate(5px, 6px);
 }
 
-#cross-2{
-    grid-row:5;
-    transform: rotate(-45deg) translate(5px, -6px);;
+#cross-2 {
+    grid-row: 5;
+    transform: rotate(-45deg) translate(5px, -6px);
+    ;
 }
 
 #nav-bar {
@@ -400,7 +408,7 @@ form>div>input {
 #first-name,
 #email,
 #phone,
-#instructions{
+#instructions {
     width: 98%;
 }
 
@@ -414,6 +422,7 @@ form>div>input {
     padding: .8rem 1rem;
     margin: .8rem 0;
 }
+
 #confirm>div {
     border: 2px solid var(--footer-color);
     border-radius: 10px;
@@ -459,6 +468,7 @@ form>div>input {
     grid-column: 4;
     grid-row: 2
 }
+
 #about-bf-p {
     grid-column: 4;
     grid-row: 3
@@ -478,6 +488,7 @@ form>div>input {
     grid-column: 2;
     grid-row: 6;
 }
+
 #contact {
     color: var(--accent-color);
     background-color: var(--primary-color);
@@ -502,14 +513,17 @@ form>div>input {
     grid-column: 2;
     grid-row: 2;
 }
+
 #twit {
     grid-column: 4;
     grid-row: 2;
 }
+
 #fb {
     grid-column: 6;
     grid-row: 2;
 }
+
 #social-contact>h2,
 #map>h2 {
     font-size: 1.2rem;
@@ -589,6 +603,20 @@ footer>a>picture>img {
 
 .hidden {
     display: none !important;
+}
+
+@keyframes text-bar {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 @keyframes hero1-ani {
