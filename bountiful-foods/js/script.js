@@ -214,7 +214,7 @@ if (heading == null) {} else {
         for (let i = 0; i < headingName.length; i++) {
             heading.textContent += headingName[i];
 
-            await wait(400);
+            await wait(Math.floor(Math.random() * (500 - 200 + 1) + 200));
         }
     };
     displayName();
