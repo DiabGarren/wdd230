@@ -201,3 +201,21 @@ const submitForm = () => {
     form.classList.toggle("hidden");
     document.querySelector("#confirm").classList.toggle("hidden");
 }
+const headingName = ["B", "o", "u", "n", "t", "i", "f", "u", "l", " ", "F", "o", "o", "d", "s"];
+
+const heading = document.querySelector("#heading");
+if (heading == null) {} else {
+    const wait = (milliseconds) => {
+        return new Promise(resolve => {
+            setTimeout(resolve, milliseconds);
+        });
+    };
+    async function displayName() {
+        for (let i = 0; i < headingName.length; i++) {
+            heading.textContent += headingName[i];
+
+            await wait(500);
+        }
+    };
+    displayName();
+}
