@@ -214,7 +214,7 @@ if (heading == null) {} else {
         for (let i = 0; i < headingName.length; i++) {
             heading.textContent += headingName[i];
 
-            await wait(500);
+            await wait(400);
         }
     };
     displayName();
