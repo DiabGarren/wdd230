@@ -212,9 +212,10 @@ if (heading == null) {} else {
     };
     async function displayName() {
         for (let i = 0; i < headingName.length; i++) {
-            heading.textContent += headingName[i];
+            heading.textContent += headingName[i] + "|";
 
             await wait(500);
+            heading.textContent = heading.textContent.substring(0, heading.textContent.length-1);
         }
     };
     displayName();
